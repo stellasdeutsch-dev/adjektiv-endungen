@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="ein guter Wein, der gute Wein, mit gutem Wein — одно правило вместо 48 клеток таблицы. Интерактивный гайд Stellas.">
+<meta property="og:title" content="Окончания прилагательных: антикризисная сессия">
+<meta property="og:description" content="ein guter Wein, der gute Wein, mit gutem Wein — одно правило вместо 48 клеток таблицы. Интерактивный гайд Stellas.">
+<meta name="theme-color" content="#E4E4E1">
+<link rel="icon" href="../media/logo.webp">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+<title>Окончания прилагательных: антикризисная сессия</title>
+<link rel="preload" href="../assets/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/bagelfatone-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Bagel Fat One';font-style:normal;font-weight:400;font-display:swap;src:url(../assets/fonts/bagelfatone-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Onest';font-style:normal;font-weight:300 700;font-display:swap;src:url(../assets/fonts/onest-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Onest';font-style:normal;font-weight:300 700;font-display:swap;src:url(../assets/fonts/onest-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Rubik';font-style:normal;font-weight:800 900;font-display:swap;src:url(../assets/fonts/rubik-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Rubik';font-style:normal;font-weight:800 900;font-display:swap;src:url(../assets/fonts/rubik-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+</style>
+<script defer src="../assets/gsap-bundle.min.js"></script>
+
+<style>
+:root{
+  --bg:#0c0c0c;--bg2:#141414;--bg3:#1b1b1b;--paper:#f5f4f2;--ink:#121212;
+  --red:#ff2e1f;--red2:#e01a0d;--peach:#f2a57c;--orange:#ff8a2a;--gold:#ffc36b;
+  --txt:#f3f3f3;--mut:#9a9a9a;--mut2:#6d6d6d;--line:rgba(255,255,255,.12);
+  --f:'Onest',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--f);font-weight:400;line-height:1.5;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+a{color:inherit}
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px;position:relative}
+.sec{position:relative;padding:72px 0}
+.dark{background:var(--bg);background-image:radial-gradient(1200px 600px at 20% 10%,#1d1d1d 0,transparent 60%),radial-gradient(900px 500px at 90% 80%,#181818 0,transparent 60%)}
+.light{background:var(--paper);color:var(--ink);position:relative}
+/* headings: light + bold mix like the reference */
+.h1,.h2{font-weight:300;letter-spacing:-.01em;line-height:1.14;margin:0}
+.h1 b,.h2 b{font-weight:700}
+.h1{font-size:clamp(30px,8.4vw,52px)}
+.h2{font-size:clamp(27px,7.2vw,44px);text-align:center}
+.h2 .wd,.h1 .wd{display:inline-block}
+.sub{color:var(--mut);text-align:center;margin:14px auto 0;max-width:560px;font-size:15px;letter-spacing:.02em}
+.light .sub{color:#6f6f6f}
+.peach{color:var(--peach)}
+.redt{color:var(--red)}
+/* red CTA */
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:62px;padding:0 30px;border:0;border-radius:6px;
+  background:linear-gradient(180deg,#ff4a3b 0,#ff2414 55%,#e5170a 100%);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 14px 40px -6px rgba(255,40,20,.75),0 2px 0 rgba(255,255,255,.25) inset;position:relative;overflow:hidden;transition:scale .2s}
+.cta:hover{scale:1.03}
+.cta::after{content:"";position:absolute;inset:-40% auto -40% -30%;width:30%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);rotate:20deg;animation:shine 3.2s infinite}
+@keyframes shine{0%,60%{left:-40%}100%{left:130%}}
+.cta.wide{width:100%}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:9px 14px;display:inline-flex;gap:8px;align-items:center;font-weight:600}
+.ghost.w{background:#f2f2f2;color:#333;border-color:#f2f2f2}
+.dash{border:1px dashed rgba(255,255,255,.22);border-radius:10px}
+.say{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--peach);display:inline-flex;align-items:center;justify-content:center;font-size:15px;flex:none;transition:scale .15s,background .2s}
+.say:hover{background:rgba(255,46,31,.15);scale:1.08}
+.light .say{border-color:#ddd;background:#fff;color:var(--red)}
+.nosp .say{display:none!important}
+
+/* ===== HEADER ===== */
+.top{position:relative;z-index:5;display:flex;align-items:center;gap:14px;padding:16px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:40px;height:40px;object-fit:contain;background:#fff;border-radius:50%;padding:4px}
+.brand span{font-size:10px;letter-spacing:.14em;color:var(--mut);text-transform:uppercase;line-height:1.35}
+.brand span b{display:block;color:#fff;font-size:13px;letter-spacing:.2em}
+.tmeta{display:none;align-items:center;gap:10px;font-size:12px;color:var(--mut)}
+.tmeta b{color:#fff;font-weight:600;display:block}
+.play{width:36px;height:36px;border-radius:50%;background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#bbb}
+.tsp{margin-left:auto}
+@media(min-width:900px){.tmeta{display:flex}.top{padding:22px 16px}}
+
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;background:#0b0b0b;padding-bottom:140px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 520px at 78% 48%,rgba(255,90,30,.22),transparent 60%),radial-gradient(500px 400px at 10% 90%,rgba(255,60,20,.12),transparent 60%);pointer-events:none}
+.embers{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hgrid{position:relative;z-index:3;display:grid;gap:24px;padding-top:18px}
+.hero .h1{animation:rise .9s cubic-bezier(.2,.9,.25,1.2) both .1s}
+.hero .h1 .lt{color:#d6d6d6}
+.hbul{display:flex;gap:12px;color:#bdbdbd;margin:20px 0 26px;font-size:16px;animation:rise .9s both .3s}
+.hbul i{width:10px;height:10px;border:1.5px solid #777;border-radius:50%;margin-top:7px;flex:none}
+.hcta{display:flex;flex-direction:column;gap:16px;animation:rise .9s both .45s}
+.hcta small{color:#9b9b9b;font-size:13px;line-height:1.5}
+.hcta small b{color:#ddd}
+@keyframes rise{from{translate:0 40px;opacity:0}}
+@media(min-width:900px){.hgrid{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:60px}.hcta{flex-direction:row;align-items:center}.hcta .cta{min-width:330px}}
+/* bottle */
+.bwrap{position:relative;height:440px;display:flex;justify-content:center;animation:rise 1.1s both .25s}
+.bottle{position:relative;width:170px;height:430px;z-index:2;rotate:-8deg}
+.bottle svg{width:100%;height:100%;overflow:visible}
+.label{position:absolute;left:17px;right:17px;top:236px;height:132px;background:linear-gradient(180deg,#f3e7d3,#e5d3b4);border-radius:4px;color:#2a1610;text-align:center;padding:12px 6px;box-shadow:0 0 0 2px #b8222255 inset,0 8px 20px rgba(0,0,0,.5);overflow:hidden}
+.label .l1{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7b3a2a;height:16px}
+.label .l2{font-size:30px;font-weight:700;line-height:1.1;margin-top:6px;white-space:nowrap}
+.label .l2 em{font-style:normal;color:var(--red);display:inline-block}
+.label .l3{font-size:15px;margin-top:2px;font-weight:600}
+.label .l4{position:absolute;left:0;right:0;bottom:8px;font-size:9px;letter-spacing:.2em;color:#9c6b52}
+.flames{position:absolute;left:50%;bottom:30px;width:320px;height:300px;translate:-50% 0;z-index:1;pointer-events:none}
+.flames svg{width:100%;height:100%;overflow:visible;filter:blur(.4px)}
+.fl1,.fl2,.fl3,.fl4{transform-box:fill-box;transform-origin:50% 100%}
+.fl1{animation:flick 1.3s ease-in-out infinite alternate}
+.fl2{animation:flick 1.7s ease-in-out infinite alternate-reverse}
+.fl3{animation:flick 1.1s ease-in-out infinite alternate}
+.fl4{animation:flick 2.1s ease-in-out infinite alternate-reverse}
+@keyframes flick{0%{scale:1 1}50%{scale:1.06 .92}100%{scale:.94 1.1}}
+.glowbase{position:absolute;left:50%;bottom:10px;width:360px;height:120px;translate:-50% 0;background:radial-gradient(closest-side,rgba(255,110,30,.55),transparent);filter:blur(10px);animation:pulse 2.4s ease-in-out infinite alternate}
+@keyframes pulse{to{opacity:.55}}
+/* burnt paper edges */
+.burn{position:absolute;left:0;right:0;height:120px;pointer-events:none;z-index:4}
+.burn svg{width:100%;height:100%;display:block}
+.burn.b{bottom:-1px}
+.burn.t{top:-1px}
+.burn .glow{animation:pulse 1.8s ease-in-out infinite alternate}
+
+/* ===== THREAD STORY ===== */
+.threads{display:grid;gap:14px;max-width:620px;margin:34px auto 0}
+.post{background:#151515;border:1px solid #222;border-radius:16px;padding:16px 16px 18px;position:relative}
+.ph{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.ava{width:36px;height:36px;border-radius:50%;background:#fff center/72% no-repeat;border:1px solid #333;flex:none}
+.ph b{font-size:14px}
+.ph span{color:var(--mut2);font-size:13px;margin-left:auto}
+.post p{margin:0 0 8px;font-size:16px;line-height:1.55;color:#e6e6e6}
+.post p:last-child{margin:0}
+.post .de{color:var(--peach);font-weight:600;white-space:nowrap}
+.post .de em{font-style:normal;color:var(--red);font-weight:700}
+.pg{position:absolute;right:14px;bottom:10px;color:#555;font-size:12px}
+.tail{max-width:620px;margin:22px auto 0;text-align:center;color:#bdbdbd;font-size:17px}
+
+/* ===== PROBLEMS (light, burnt) ===== */
+.light.burnt{padding-top:120px;padding-bottom:150px}
+.probs{display:grid;grid-template-columns:1fr 1fr;gap:34px 14px;margin-top:44px}
+.pb{text-align:center;color:#555;font-size:14px;line-height:1.4}
+.obj{width:96px;height:96px;margin:0 auto 14px;position:relative;display:flex;align-items:center;justify-content:center}
+.obj::before{content:"";position:absolute;inset:8px 6px 0;border-radius:28px;background:linear-gradient(145deg,#fff,#e2e1de);box-shadow:0 18px 26px -10px rgba(0,0,0,.35),0 2px 0 #fff inset}
+.obj::after{content:"";position:absolute;left:12%;right:12%;bottom:-10px;height:12px;background:radial-gradient(closest-side,rgba(0,0,0,.28),transparent);filter:blur(2px)}
+.obj .ic{position:relative;z-index:1;font-size:46px;color:#2b2b2b;stroke-width:1.4}
+.obj .ic.r{color:var(--red)}
+.obj em{position:absolute;z-index:2;top:2px;right:6px;font-style:normal;font-weight:700;color:var(--red);font-size:20px}
+@media(min-width:900px){.probs{grid-template-columns:repeat(4,1fr);gap:46px 30px}.obj{width:120px;height:120px}.obj .ic{font-size:56px}}
+
+/* ===== EXPERTS ===== */
+.experts{display:grid;gap:44px;margin-top:46px}
+.ex{text-align:center}
+.port{width:220px;height:240px;margin:0 auto 16px;position:relative;display:flex;align-items:flex-end;justify-content:center}
+.port .halo{position:absolute;inset:16px 10px 0;border-radius:50% 50% 12px 12px;background:radial-gradient(120px 140px at 50% 40%,#2a2a2a,#111 70%);box-shadow:0 0 0 1px #262626}
+.port .suit{position:absolute;bottom:0;left:24px;right:24px;height:92px;border-radius:70px 70px 0 0;background:linear-gradient(180deg,#232323,#0e0e0e)}
+.port .suit::before{content:"";position:absolute;left:50%;top:0;width:44px;height:58px;translate:-50% 0;background:linear-gradient(180deg,#e9e9e9,#bcbcbc);clip-path:polygon(0 0,100% 0,50% 100%)}
+.port .head{position:absolute;bottom:74px;left:50%;translate:-50% 0;width:118px;height:118px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#3a3a3a,#141414);border:1px solid #333;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:40px;letter-spacing:-.02em;color:#fff;box-shadow:0 0 50px -6px rgba(255,90,30,.55)}
+.port .head span{background:linear-gradient(180deg,#fff,#ffb27d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ex h3{margin:0;font-size:24px;font-weight:700}
+.ex .role{color:var(--peach);font-weight:600;margin:8px 0 12px}
+.dia{width:10px;height:10px;border:1.5px solid var(--red);rotate:45deg;margin:0 auto 16px}
+.chips{display:flex;flex-direction:column;align-items:center;gap:9px}
+.chip{border:1px solid #2c2c2c;border-radius:6px;padding:6px 12px;font-size:13px;color:#cfcfcf;background:rgba(255,255,255,.02)}
+.chip:nth-child(4){color:#a3a3a3}.chip:nth-child(5){color:#7a7a7a}
+@media(min-width:900px){.experts{grid-template-columns:repeat(3,1fr);gap:24px}}
+
+/* ===== NOUN "LOGOS" ===== */
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 10px;margin:40px auto 40px;max-width:900px;align-items:center}
+.lg{background:none;border:0;color:#7a7a7a;font-size:18px;padding:6px 2px;transition:color .2s,scale .2s;line-height:1.1}
+.lg:hover,.lg.on{color:#fff;scale:1.06}
+.lg.red{color:#e5463a}.lg.s1{font-family:Georgia,serif;letter-spacing:.06em;text-transform:uppercase;font-size:16px}
+.lg.s2{font-weight:700;font-style:italic}.lg.s3{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:14px}
+.lg.s4{font-weight:300;font-size:22px}.lg.s5{font-family:'Courier New',monospace;font-weight:700}
+.lgout{text-align:center;min-height:32px;color:var(--peach);font-size:20px;font-weight:600;margin-bottom:26px}
+@media(min-width:700px){.logos{grid-template-columns:repeat(5,1fr)}}
+
+/* ===== GOAL ===== */
+.goals{display:grid;gap:14px;margin-top:36px}
+.goal{display:flex;gap:16px;align-items:center;padding:20px 18px;border:1px dashed rgba(255,255,255,.14);border-radius:8px;color:#cfcfcf;font-size:15px}
+.num{width:38px;height:38px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;background:#f6c3a3;color:#9a3b1c}
+@media(min-width:900px){.goals{grid-template-columns:repeat(3,1fr)}}
+
+/* ===== THREE SIDES ===== */
+.sides{position:relative;max-width:820px;margin:20px auto 0;height:440px}
+.sides svg.ell{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.sides .cent{position:absolute;left:50%;top:44px;translate:-50% 0;width:min(92%,520px);text-align:center}
+.sides .cent .ic{font-size:64px;color:#444;margin:0 auto 10px;display:block}
+.sides .cent h3{margin:0;color:var(--peach);font-size:22px;font-weight:700}
+.sides .cent p{margin:10px 0 0;color:#bbb;font-size:15px}
+.sd{position:absolute;text-align:center;width:150px;translate:-50% 0}
+.rc{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff5a4a,#e3160a);box-shadow:0 0 0 6px rgba(255,46,31,.12),0 10px 30px rgba(255,40,20,.5);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;margin:0 auto 12px;color:#fff}
+.sd b{display:block;font-size:15px}
+.sd small{display:block;color:#9a9a9a;font-size:12.5px;margin-top:3px;line-height:1.35}
+.sd.s1{left:16%;top:250px}.sd.s2{left:50%;top:320px}.sd.s3{left:84%;top:250px}
+.spark{position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:#ffd2a0;box-shadow:0 0 14px 4px rgba(255,140,40,.9);margin:-6px 0 0 -6px}
+@media(max-width:700px){.sides{height:560px}.sides .cent{top:10px}.sides .cent .ic{font-size:48px}.sd{width:118px}.sd.s1{left:19%;top:350px}.sd.s3{left:81%;top:350px}.sd.s2{top:440px}}
+
+/* ===== RULE / FLIGHT ===== */
+.rulebox{max-width:760px;margin:30px auto 0;text-align:center;color:#cfcfcf;font-size:17px}
+.rulebox p{margin:0 0 10px}
+.flags{display:flex;justify-content:center;gap:8px;margin:18px 0 6px}
+.flags span{width:42px;height:48px;border-radius:6px;background:linear-gradient(180deg,#ff4a3b,#d8170a);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;color:#fff;box-shadow:0 8px 20px -6px rgba(255,40,20,.6)}
+.fly{max-width:760px;margin:34px auto 0;background:#121212;border:1px solid #232323;border-radius:16px;padding:16px;position:relative;overflow:hidden}
+.ftabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.ftabs button{flex:none;background:#1c1c1c;border:1px solid #2a2a2a;color:#bbb;border-radius:30px;padding:8px 14px;font-size:13px;white-space:nowrap}
+.ftabs button.on{background:var(--red);border-color:var(--red);color:#fff}
+.fstage{position:relative;height:150px;display:flex;align-items:center;justify-content:center}
+.fline{display:flex;align-items:baseline;gap:.32em;font-size:clamp(28px,8vw,48px);font-weight:600;white-space:nowrap}
+.tk{display:inline-flex;align-items:baseline;transition:opacity .35s}
+.tk.art .st{display:inline-block}
+.tk .fl,.tk .slot{display:inline-block;min-width:0;border-radius:6px;padding:0 .04em}
+.tk .fl.sig,.tk .slot.sig{background:var(--red);color:#fff;padding:0 .1em;box-shadow:0 0 24px rgba(255,46,31,.7)}
+.tk .fl.gone{color:#444;text-decoration:line-through}
+.tk .e{color:#8a8a8a}
+.tk.adj{color:var(--peach)}
+.tk.hide{opacity:0;width:0;overflow:hidden;margin-left:-.32em}
+.qbad{position:absolute;left:50%;top:10px;translate:-50% 0;background:#2a1210;color:#ff8a7d;border:1px solid #5a1d17;border-radius:30px;padding:4px 12px;font-size:12px;opacity:0;transition:opacity .3s}
+.qbad.on{opacity:1}
+.flyer{position:absolute;left:0;top:0;font-size:clamp(28px,8vw,48px);font-weight:700;background:var(--red);color:#fff;border-radius:6px;padding:0 .1em;line-height:1.2;opacity:0;pointer-events:none;box-shadow:0 0 30px rgba(255,60,30,.9);z-index:3}
+.fcap{min-height:72px;text-align:center;color:#cfcfcf;font-size:15.5px;padding:0 4px}
+.fcap b{color:#fff}
+.fctl{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.fctl button{background:#1d1d1d;border:1px solid #2c2c2c;color:#ddd;border-radius:8px;padding:10px 14px;font-size:14px}
+.fctl button.go{background:var(--red);border-color:var(--red);color:#fff;font-weight:600}
+.fdots{display:flex;gap:6px}
+.fdots i{width:8px;height:8px;border-radius:50%;background:#333;transition:background .3s,scale .3s}
+.fdots i.on{background:var(--red);scale:1.3}
+
+/* ===== TABLE ===== */
+.tabs{display:flex;justify-content:center;gap:8px;margin:30px 0 18px;flex-wrap:wrap}
+.tabs button{background:#171717;border:1px solid #2a2a2a;color:#bbb;border-radius:8px;padding:10px 14px;font-size:14px}
+.tabs button.on{background:#fff;color:#111;border-color:#fff;font-weight:600}
+.grid4{display:grid;grid-template-columns:44px repeat(4,1fr);gap:5px;max-width:760px;margin:0 auto;perspective:800px}
+.gh{font-size:11px;color:#8a8a8a;text-align:center;padding:4px 0;line-height:1.25}
+.gh b{display:block;color:#ddd;font-size:12px}
+.rh{font-size:11px;color:#9a9a9a;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;rotate:180deg;letter-spacing:.08em}
+.c{border:1px solid #262626;background:#151515;color:#ddd;border-radius:8px;padding:8px 2px;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:background .3s,border-color .3s}
+.c small{font-size:11px;color:#8d8d8d;line-height:1.2}
+.c b{font-size:15px;font-weight:600}
+.c b em{font-style:normal}
+.c.isl{background:#1f1915;border-color:#4a3529}.c.isl em{color:var(--peach)}
+.c.en em{color:#a8a8a8}
+.c.sig{background:#2a0f0c;border-color:#7a2017}.c.sig em{color:#fff;background:var(--red);border-radius:4px;padding:0 3px}
+.c.exc{background:#241d0c;border-color:#6b5513}.c.exc em{color:#ffd36b}
+.legend{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:16px 0 0;font-size:12.5px;color:#aaa}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.res{display:grid;gap:30px;margin-top:44px}
+.rs .ic{font-size:44px;color:var(--peach);stroke-width:1.2;margin-bottom:14px}
+.rs h4{margin:0 0 8px;font-size:17px}
+.rs p{margin:0;color:#a7a7a7;font-size:14.5px}
+.rs.hl{background:#151515;border-radius:10px;padding:20px;margin:-20px}
+@media(min-width:900px){.res{grid-template-columns:repeat(3,1fr);gap:40px}.grid4{grid-template-columns:60px repeat(4,1fr);gap:8px}.c{min-height:74px}.c b{font-size:18px}}
+
+/* ===== CURVE ===== */
+.curve{position:relative;max-width:820px;margin:34px auto 0;padding-bottom:84px}
+.curve svg{width:100%;height:400px;display:block;overflow:visible}
+@media(min-width:900px){.curve svg{height:440px}}
+.cdot{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#ffd9c2;box-shadow:0 0 0 5px rgba(255,170,120,.18),0 0 18px rgba(255,140,80,.8)}
+.ctxt{position:absolute;font-size:13px;line-height:1.35;color:#d8d8d8}
+.ctxt b{color:#fff}
+.ctxt .ans{display:block;margin-top:5px;color:var(--peach);font-weight:600;min-height:18px}
+.cchip{position:absolute;left:0;top:0;background:var(--red);color:#fff;font-weight:700;font-size:13px;border-radius:20px;padding:4px 10px;white-space:nowrap;translate:-50% -210%;opacity:0;pointer-events:none;box-shadow:0 6px 20px rgba(255,40,20,.6)}
+.exs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.exs button{background:#161616;border:1px dashed #3a3a3a;color:#ddd;border-radius:30px;padding:9px 14px;font-size:14px}
+.exs button.on{border-style:solid;border-color:var(--red);color:#fff}
+.cout{text-align:center;margin-top:18px;min-height:46px;font-size:24px;font-weight:600;display:flex;gap:10px;justify-content:center;align-items:center}
+.cout em{font-style:normal;color:var(--red)}
+
+/* ===== TRAPS ===== */
+.traps{display:grid;gap:14px;margin-top:36px}
+.trap{padding:22px 20px;border:1px dashed rgba(255,255,255,.18);border-radius:10px}
+.trap h4{margin:0 0 8px;color:var(--peach);font-size:18px}
+.trap p{margin:0 0 12px;color:#bdbdbd;font-size:14.5px}
+.ex2{display:flex;align-items:center;gap:10px;background:#141414;border-radius:8px;padding:10px 12px;font-weight:600;font-size:16px;flex-wrap:wrap}
+.ex2 s{color:#666}
+.ex2 em{font-style:normal;color:var(--red)}
+.ex2 .say{margin-left:auto}
+@media(min-width:900px){.traps{grid-template-columns:repeat(3,1fr)}}
+
+/* ===== QUIZ ===== */
+.qz{max-width:640px;margin:34px auto 0;background:#fff;color:#111;border-radius:14px;padding:22px 18px;box-shadow:0 30px 80px -20px rgba(0,0,0,.4);position:relative;overflow:hidden}
+.qtop{display:flex;justify-content:space-between;font-size:12px;color:#888;letter-spacing:.08em;text-transform:uppercase}
+.qbar{height:4px;background:#eee;border-radius:4px;margin:10px 0 18px;overflow:hidden}
+.qbar i{display:block;height:100%;background:var(--red);width:0;transition:width .4s}
+.qq{font-size:22px;font-weight:600;line-height:1.3;margin-bottom:6px}
+.qq u{text-decoration:none;border-bottom:2px solid var(--red);padding:0 14px}
+.qh{color:#888;font-size:14px;margin-bottom:16px}
+.qo{display:grid;gap:8px}
+.qo button{text-align:left;background:#f4f4f4;border:1px solid #e6e6e6;border-radius:10px;padding:14px 16px;font-size:17px;font-weight:600;color:#111;transition:background .2s,border-color .2s}
+.qo button.ok{background:#e9f8ee;border-color:#2fb35d}
+.qo button.no{background:#fdecea;border-color:#ff2e1f}
+.qe{margin-top:14px;font-size:15px;color:#333;min-height:20px}
+.qe b{color:var(--red)}
+.qn{margin-top:14px;display:none}
+.qn.on{display:inline-flex}
+.qfin{text-align:center;padding:20px 0}
+.qfin .big{font-size:56px;font-weight:700;color:var(--red)}
+.conf{position:absolute;width:8px;height:12px;top:-12px;pointer-events:none}
+
+/* ===== CHEAT ===== */
+.cheat{max-width:760px;margin:34px auto 0;display:grid;gap:10px}
+.cl{display:flex;gap:14px;align-items:center;background:#fff;border-radius:10px;padding:14px 16px;color:#222;font-size:15px;box-shadow:0 10px 30px -18px rgba(0,0,0,.4)}
+.cl .ic{font-size:26px;color:var(--red)}
+.cl b{color:#000}
+.cl em{font-style:normal;color:var(--red);font-weight:700}
+
+/* ===== AD ===== */
+.ad{padding-bottom:110px}
+.adgrid{display:grid;gap:30px;margin-top:40px}
+.steps3{position:relative;height:340px;margin-bottom:60px}
+.steps3 svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.st3{position:absolute;font-size:13.5px;color:#dcdcdc;line-height:1.4;max-width:58%}
+.st3 b{color:#fff}
+.stdot{position:absolute;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#ffd9c2;box-shadow:0 0 0 5px rgba(255,170,120,.18),0 0 18px rgba(255,140,80,.8)}
+.phonebox{position:relative;display:flex;flex-direction:column;align-items:center}
+.phone{position:relative;z-index:2;width:230px;border-radius:34px;padding:9px;background:#0a0a0a;border:1px solid #2c2c2c;box-shadow:0 30px 80px rgba(0,0,0,.8),0 0 0 2px #1a1a1a}
+.phone video{border-radius:26px;width:100%;aspect-ratio:858/1352;object-fit:cover;background:#111}
+.phonebox .flames{bottom:60px;width:360px}
+.form{position:relative;z-index:3;width:100%;max-width:360px;margin-top:-30px;text-align:center}
+.form p{color:#ddd;font-size:15px;margin:0 0 12px}
+.form p b{color:var(--peach)}
+.fakein{background:#fff;color:#999;border-radius:6px;height:62px;display:flex;align-items:center;gap:10px;padding:0 18px;font-size:15px;margin-bottom:12px}
+.fakein b{color:#222}
+.form small{display:block;color:#666;font-size:11px;margin-top:10px}
+.form small a{color:#888}
+.pains{display:grid;gap:12px;margin-top:40px}
+.pain{background:#141414;border:1px solid #222;border-radius:14px;padding:18px}
+.pain .ph{margin-bottom:8px}
+.pain p{margin:0;color:#ddd;font-size:15.5px}
+.pain p+p{margin-top:6px}
+@media(min-width:900px){.pains{grid-template-columns:repeat(2,1fr)}.adgrid{grid-template-columns:1fr 1fr;align-items:center}}
+.counts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.cn{text-align:center;padding:20px 8px;border:1px dashed rgba(255,255,255,.16);border-radius:10px}
+.cn b{display:block;font-size:34px;font-weight:700;color:#fff}
+.cn b i{font-style:normal;color:var(--red)}
+.cn span{color:#9a9a9a;font-size:13px}
+@media(min-width:900px){.counts{grid-template-columns:repeat(4,1fr)}}
+.inside{display:grid;gap:26px;margin-top:50px}
+.feat h4{margin:0 0 6px;font-size:19px}
+.feat p{margin:0 0 14px;color:#aaa;font-size:14.5px}
+.feat ul{margin:0 0 14px;padding:0;list-style:none;color:#cfcfcf;font-size:14.5px}
+.feat li{display:flex;gap:8px;padding:3px 0}
+.feat li .ic{color:var(--red);margin-top:4px}
+.bro{border-radius:12px;overflow:hidden;background:#1a1a1a;border:1px solid #2a2a2a;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+.bro .bar{height:26px;display:flex;gap:6px;align-items:center;padding:0 10px;background:#202020}
+.bro .bar i{width:9px;height:9px;border-radius:50%;background:#444}
+.bro .bar i:first-child{background:#ff5f57}.bro .bar i:nth-child(2){background:#febc2e}.bro .bar i:nth-child(3){background:#28c840}
+.bro video,.bro img{width:100%;background:#fff}
+@media(min-width:900px){.inside{grid-template-columns:1fr 1fr;gap:40px 40px}}
+.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;scrollbar-width:thin}
+.shots figure{flex:none;width:78%;max-width:440px;margin:0;scroll-snap-align:start}
+.shots img{border-radius:10px;border:1px solid #2a2a2a;aspect-ratio:16/10;object-fit:cover;object-position:top;width:100%;background:#fff}
+.shots figcaption{color:#9a9a9a;font-size:13px;margin-top:8px}
+.revs{display:grid;gap:12px;margin-top:30px}
+.revs img{border-radius:12px;border:1px solid #222;width:100%}
+@media(min-width:900px){.revs{grid-template-columns:repeat(4,1fr);align-items:start}}
+.prices{display:grid;gap:14px;margin-top:40px}
+.pr{border:1px dashed rgba(255,255,255,.2);border-radius:12px;padding:24px 20px;text-align:center;position:relative}
+.pr h4{margin:0;font-size:16px;color:#ccc;font-weight:600;letter-spacing:.04em}
+.pr .p{font-size:52px;font-weight:700;margin:6px 0}
+.pr .p s{font-size:22px;color:#666;font-weight:400;margin-right:8px}
+.pr ul{list-style:none;padding:0;margin:0 0 18px;color:#aaa;font-size:14px}
+.pr li{padding:3px 0}
+.pr.best{border:1px solid var(--red);background:linear-gradient(180deg,#2a0d0a,#121212);box-shadow:0 30px 80px -30px rgba(255,46,31,.7)}
+.pr .tag{position:absolute;top:-12px;left:50%;translate:-50% 0;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;border-radius:20px;padding:4px 12px;white-space:nowrap}
+.pr .cta{min-height:54px;width:100%}
+.pr .ghost{width:100%;justify-content:center;min-height:50px;font-size:12px}
+@media(min-width:900px){.prices{grid-template-columns:1fr 1.15fr 1fr;align-items:center}}
+.foot{text-align:center;color:#8a8a8a;font-size:clamp(18px,4.8vw,28px);line-height:1.6;padding:70px 0 40px}
+.foot a{text-decoration:none;color:var(--red)}
+.foot .w{color:#fff}
+.dock{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;display:flex;align-items:center;gap:10px;background:rgba(18,18,18,.96);border:1px solid #2a2a2a;border-radius:14px;padding:8px 8px 8px 14px;box-shadow:0 20px 50px rgba(0,0,0,.6);translate:0 140%;transition:translate .4s cubic-bezier(.2,.9,.3,1.2)}
+.dock.on{translate:0 0}
+.dock span{font-size:13px;color:#ccc;line-height:1.25}
+.dock span b{color:#fff;display:block;font-size:15px}
+.dock .cta{min-height:46px;padding:0 18px;margin-left:auto;font-size:12px}
+@media(min-width:900px){.dock{left:50%;right:auto;width:560px;translate:-50% 140%}.dock.on{translate:-50% 0}}
+.outro{text-align:center;padding:80px 0 60px}
+.outro p{color:#bbb;font-size:18px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wine" viewBox="0 0 24 24"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></symbol>
+<symbol id="i-frown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"/><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></symbol>
+<symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></symbol>
+<symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-circle-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-table" viewBox="0 0 24 24"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></symbol>
+<symbol id="i-clipboard-list" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+<symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+<symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+<symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
+<symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+<symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-chart-line" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/><path d="M5 12.859a10 10 0 0 1 5.17-2.69"/><path d="M19 12.859a10 10 0 0 0-2.007-1.523"/><path d="M2 8.82a15 15 0 0 1 4.177-2.643"/><path d="M22 8.82a15 15 0 0 0-11.288-3.764"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></symbol>
+<symbol id="i-mic-off" viewBox="0 0 24 24"><line x1="2" x2="22" y1="2" y2="22"/><path d="M18.89 13.23A7.12 7.12 0 0 0 19 12v-2"/><path d="M5 10v2a7 7 0 0 0 12 5"/><path d="M15 9.34V5a3 3 0 0 0-5.68-1.33"/><path d="M9 9v3a3 3 0 0 0 5.12 2.12"/><line x1="12" x2="12" y1="19" y2="22"/></symbol>
+<symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+<symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></symbol>
+<symbol id="i-layers-3" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
+</svg>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <canvas class="embers" id="emb1"></canvas>
+  <div class="top">
+    <a class="brand" href="#"><img src="../media/logo.webp" alt="Stellas"><span><b>STELLAS</b>антикризисная сессия<br>по окончаниям · 2026</span></a>
+    <div class="tmeta"><div class="play"><svg class="ic"><use href="#i-play"/></svg></div><div><b>Онлайн формат</b>по всей Германии</div></div>
+    <div class="tmeta"><div><b>der · die · das</b>ежедневно с 9:00 до 21:00</div></div>
+    <button class="ghost w tsp" data-say="Ein guter Wein. Der gute Wein. Mit gutem Wein."><svg class="ic"><use href="#i-volume-2"/></svg>Произнесите мне</button>
+  </div>
+  <div class="wrap hgrid">
+    <div>
+      <h1 class="h1"><b>Как не закрыть разговор</b> <span class="lt">на «ein gute Wein» и сформировать</span> <b>оптимальный план окончаний</b> <span class="lt">в условиях кризиса</span></h1>
+      <div class="hbul"><i></i><span>Для студентов A2–B1, руководителей собственной речи и генеральных директоров своих ошибок</span></div>
+      <div class="hcta">
+        <a class="cta" href="#rule">Получить правило</a>
+        <small>Бесплатная сессия для людей<br>с ошибками <b>от 3 штук в предложении</b></small>
+      </div>
+    </div>
+    <div class="bwrap">
+      <div class="glowbase"></div>
+      <div class="flames"><svg viewBox="0 0 320 300" aria-hidden="true"><defs>
+        <linearGradient id="fg1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff3d00"/><stop offset=".55" stop-color="#ff8a00"/><stop offset="1" stop-color="#ffd36b" stop-opacity="0"/></linearGradient>
+        <linearGradient id="fg2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffb000"/><stop offset=".6" stop-color="#ffe08a"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+        <path class="fl1" fill="url(#fg1)" d="M70 300C30 250 40 190 80 150c-5 40 15 60 25 62-10-60 30-110 70-140-20 60 10 90 30 110 5-30 20-45 35-55-10 50 40 90 20 173z"/>
+        <path class="fl2" fill="url(#fg1)" opacity=".8" d="M180 300c-30-40-20-90 10-120 0 30 15 40 20 40 0-40 20-70 50-90-15 50 30 80 20 170z"/>
+        <path class="fl3" fill="url(#fg2)" opacity=".9" d="M110 300c-20-40-5-80 20-100 0 25 10 35 18 35-2-35 15-60 40-75-8 40 25 70 10 140z"/>
+        <path class="fl4" fill="url(#fg1)" opacity=".7" d="M20 300c-10-30 0-60 25-80 0 25 10 30 15 30 0-20 10-35 25-45-5 30 15 50 5 95z"/>
+      </svg></div>
+      <div class="bottle" id="bottle">
+        <svg viewBox="0 0 170 430" aria-hidden="true"><defs>
+          <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#050505"/><stop offset=".18" stop-color="#2b1010"/><stop offset=".3" stop-color="#140707"/><stop offset=".78" stop-color="#090404"/><stop offset=".92" stop-color="#ff7a2a" stop-opacity=".55"/><stop offset="1" stop-color="#1a0805"/></linearGradient>
+          <linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+          <rect x="66" y="0" width="38" height="34" rx="4" fill="#b3170d"/>
+          <path d="M68 30h34v92c0 26 52 44 52 96v196c0 9-7 16-16 16H32c-9 0-16-7-16-16V218c0-52 52-70 52-96z" fill="url(#gl)" stroke="#3a1a12" stroke-width="1.5"/>
+          <rect x="34" y="150" width="9" height="250" rx="4" fill="url(#hl)"/>
+        </svg>
+        <div class="label" id="lab"><div class="l1" id="lb1">ein</div><div class="l2">gut<em id="lb2">er</em></div><div class="l3">Wein</div><div class="l4">NOMINATIV · 2026</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="burn b" data-burn="bottom"></div>
+</header>
+
+<!-- ============ PROBLEMS ============ -->
+<section class="light burnt" id="probs">
+  <div class="wrap">
+    <h2 class="h2 sp">Антикризисная сессия <b>решает главные проблемы</b> окончаний</h2>
+    <div class="probs stg">
+      <div class="pb"><div class="obj"><svg class="ic"><use href="#i-circle-help"/></svg><em>?</em></div>Нет определённости: -e или&nbsp;-en</div>
+      <div class="pb"><div class="obj"><svg class="ic"><use href="#i-table"/></svg></div>Три таблицы по 16 клеток. 48&nbsp;клеток информационного шума</div>
+      <div class="pb"><div class="obj"><svg class="ic r"><use href="#i-shuffle"/></svg></div>Окончание выбирается методом тыка</div>
+      <div class="pb"><div class="obj"><svg class="ic"><use href="#i-hourglass"/></svg></div>Пауза в две секунды перед каждым прилагательным</div>
+      <div class="pb"><div class="obj"><svg class="ic"><use href="#i-pen-line"/></svg><em>!</em></div>Вас поправляют, а&nbsp;вы не&nbsp;понимаете за&nbsp;что</div>
+      <div class="pb"><div class="obj"><svg class="ic r"><use href="#i-mic-off"/></svg></div>Думаете вообще не&nbsp;использовать прилагательные</div>
+      <div class="pb"><div class="obj"><svg class="ic"><use href="#i-lock"/></svg></div>Genitiv выглядит как налоговая проверка</div>
+      <div class="pb"><div class="obj"><svg class="ic"><use href="#i-brain"/></svg></div>Таблицу выучили. В&nbsp;речи всё равно «gute Wein»</div>
+    </div>
+  </div>
+  <div class="burn b" data-burn="bottom" data-dark="1"></div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="sec dark" id="story">
+  <div class="wrap">
+    <h2 class="h2 sp">Почему эта сессия <b>вообще случилась</b></h2>
+    <div class="threads">
+      <article class="post rv">
+        <div class="ph"><div class="ava" style="background-image:url(media/logo.webp)"></div><b>stellasdeutsch</b><span>4h</span></div>
+        <p>Я учу немецкий в Австрии. В Австрии есть хойригер. В хойригере наливают вино.</p>
+        <p>Захожу. Сажусь. Официант — мужик лет шестидесяти. Усы, фартук, лицо человека, который видел всё.</p>
+        <p>Показываю в меню. Говорю, <span class="de">ist das ein gute Wein?</span></p>
+        <p>Мужик смотрит. Говорит, <span class="de">ein gute<em>r</em> Wein</span>.</p>
+        <p>Ставит это «эр» как печать в паспорт.</p>
+        <span class="pg">1/3</span>
+      </article>
+      <article class="post rv">
+        <div class="ph"><div class="ava" style="background-image:url(media/logo.webp)"></div><b>stellasdeutsch</b><span>4h</span></div>
+        <p>Говорю, gut. <span class="de">Ich nehme ein guter Wein.</span> Запомнил же.</p>
+        <p>Мужик говорит, <span class="de">eine<em>n</em> gute<em>n</em> Wein</span>.</p>
+        <p>Думаю, бл*. Пять минут назад был guter. Вино то же. Стакан тот же. Мужик тот же. Окончание другое.</p>
+        <span class="pg">2/3</span>
+      </article>
+      <article class="post rv">
+        <div class="ph"><div class="ava" style="background-image:url(media/logo.webp)"></div><b>stellasdeutsch</b><span>4h</span></div>
+        <p>Прошу сыр к вину. Говорю, <span class="de">mit gute Käse</span>.</p>
+        <p>Он говорит, <span class="de">mit gute<em>m</em> Käse</span>. Сыра ещё нет, а «эм» уже есть.</p>
+        <p>Я ошибся ещё раз пять. Мужик поправлял каждый раз. Бесплатно. Без улыбки.</p>
+        <p>Уходя, говорю, <span class="de">das war ein sehr gute<em>r</em> Wein</span>. Мужик впервые кивнул.</p>
+        <p>Вино, кстати, было кислое.</p>
+        <span class="pg">3/3</span>
+      </article>
+    </div>
+    <p class="tail rv">Три окончания за один вечер: <b class="peach">-er</b>, <b class="peach">-en</b>, <b class="peach">-em</b>. Ни одно не случайное. Сейчас покажу, кто их выбирает.</p>
+  </div>
+</section>
+
+<!-- ============ EXPERTS ============ -->
+<section class="sec dark" id="experts">
+  <div class="wrap">
+    <h2 class="h2 sp">Антикризисную сессию <b>проводят:</b></h2>
+    <p class="sub">Три типа слов, которые стоят перед прилагательным. От них зависит всё.</p>
+    <div class="experts">
+      <div class="ex rv"><div class="port"><div class="halo"></div><div class="suit"></div><div class="head"><span>der</span></div></div>
+        <h3>Господин Der</h3><div class="role">Эксперт по ясности</div><div class="dia"></div>
+        <div class="chips"><span class="chip">Сразу показывает род</span><span class="chip">Всегда показывает падеж</span><span class="chip">der · die · das · dieser · jeder · alle</span><span class="chip">Прилагательному оставляет -e или -en</span><span class="chip">Методология «я всё сказал»</span></div></div>
+      <div class="ex rv"><div class="port"><div class="halo"></div><div class="suit"></div><div class="head"><span>ein</span></div></div>
+        <h3>Господин Ein</h3><div class="role">Эксперт по недосказанности</div><div class="dia"></div>
+        <div class="chips"><span class="chip">ein Tisch: мужской или средний? Не скажет</span><span class="chip">В трёх случаях молчит</span><span class="chip">ein · kein · mein · dein · sein · unser</span><span class="chip">Молчит он, говорит прилагательное</span><span class="chip">Методология «сами разберётесь»</span></div></div>
+      <div class="ex rv"><div class="port"><div class="halo"></div><div class="suit"></div><div class="head"><span>—</span></div></div>
+        <h3>Госпожа Пустота</h3><div class="role">Эксперт по выживанию</div><div class="dia"></div>
+        <div class="chips"><span class="chip">Артикля нет вообще</span><span class="chip">Прилагательное работает за двоих</span><span class="chip">Берёт окончание у der · dem · das</span><span class="chip">Сюда же viele, einige, числа</span><span class="chip">Исключение: Genitiv м. и ср. рода → -en</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOUN LOGOS ============ -->
+<section class="sec dark" id="clients">
+  <div class="wrap">
+    <h2 class="h2 sp">Работали с более <b>3500 существительных</b></h2>
+    <p class="sub">Вот некоторые из них. Нажмите на любое.</p>
+    <div class="logos stg" id="logos">
+      <button class="lg red s2" data-p="ein guter Wein">der Wein</button>
+      <button class="lg s1" data-p="ein kaltes Bier">das Bier</button>
+      <button class="lg s3" data-p="eine heiße Suppe">die Suppe</button>
+      <button class="lg s4" data-p="mit frischem Brot">das Brot</button>
+      <button class="lg s5" data-p="der alte Käse">der Käse</button>
+      <button class="lg s2" data-p="eine große Brezel">die Brezel</button>
+      <button class="lg s3" data-p="ein dünnes Schnitzel">das Schnitzel</button>
+      <button class="lg s1" data-p="mit starkem Kaffee">der Kaffee</button>
+      <button class="lg red s4" data-p="die süße Torte">die Torte</button>
+      <button class="lg s5" data-p="kalte Milch">die Milch</button>
+      <button class="lg s3" data-p="stilles Wasser">das Wasser</button>
+      <button class="lg s2" data-p="den warmen Strudel">der Strudel</button>
+      <button class="lg s4" data-p="ein rotes Ei">das Ei</button>
+      <button class="lg s1" data-p="viele grüne Äpfel">die Äpfel</button>
+      <button class="lg s5" data-p="trotz schlechten Wetters">das Wetter</button>
+    </div>
+    <div class="lgout" id="lgout">&nbsp;</div>
+    <div style="text-align:center"><a class="cta" href="#rule">Получить правило</a></div>
+  </div>
+</section>
+
+<!-- ============ GOAL ============ -->
+<section class="sec dark" id="goal">
+  <div class="wrap">
+    <h2 class="h2 sp"><b>Цель</b> антикризисной сессии:</h2>
+    <div class="goals stg">
+      <div class="goal"><span class="num">1</span>Создать ясность для владельца прилагательного в трудной ситуации у кассы</div>
+      <div class="goal"><span class="num">2</span>Прояснить, кто в словосочетании показывает род. Посмотреть со стороны артикля</div>
+      <div class="goal"><span class="num">3</span>Заменить 48 клеток таблицы одним правилом на всю жизнь</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE SIDES ============ -->
+<section class="sec dark" id="sides">
+  <div class="wrap">
+    <div class="sides" id="sidesBox">
+      <svg class="ell" viewBox="0 0 820 440" preserveAspectRatio="none" aria-hidden="true"><path id="ellPath" d="M120 260 A290 110 0 1 0 700 260 A290 110 0 1 0 120 260" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>
+      <div class="cent"><svg class="ic"><use href="#i-refresh-cw"/></svg><h3>Мы смотрим на ситуацию с 3-х сторон</h3><p>Окончание прилагательного решают три участника. Само прилагательное в совещании не участвует.</p></div>
+      <div class="sd s1"><div class="rc">1</div><b>Артикль</b><small>кто стоит впереди: der, ein или никто</small></div>
+      <div class="sd s2"><div class="rc">2</div><b>Род</b><small>der, die, das или множественное</small></div>
+      <div class="sd s3"><div class="rc">3</div><b>Падеж</b><small>Nominativ, Akkusativ, Dativ, Genitiv</small></div>
+      <div class="spark" id="spark"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RULE ============ -->
+<section class="sec dark" id="rule">
+  <div class="wrap">
+    <h2 class="h2 sp">Главное правило: <b>флажок вешают один раз</b></h2>
+    <div class="rulebox rv">
+      <p>У каждого словосочетания есть флажок. Флажок говорит: я мужского рода. Я в дательном. Флажок это одна буква.</p>
+      <div class="flags"><span>r</span><span>s</span><span>m</span><span>n</span><span>e</span></div>
+      <p>Если флажок повесил артикль — прилагательное отдыхает. Берёт <b class="peach">-e</b> или <b class="peach">-en</b>.<br>Если артикль промолчал — флажок вешает прилагательное.</p>
+    </div>
+    <div class="fly" id="fly">
+      <div class="ftabs" id="ftabs"><button class="on" data-s="0">der → ein</button><button data-s="1">das → ein</button><button data-s="2">mit dem → mit</button></div>
+      <div class="fstage" id="fstage"><span class="qbad" id="qbad">флажка нет</span><div class="fline" id="fline"></div><div class="flyer" id="flyer">r</div></div>
+      <div class="fcap" id="fcap"></div>
+      <div class="fctl"><button id="fprev" aria-label="Назад">←</button><div class="fdots" id="fdots"><i></i><i></i><i></i></div><button class="go" id="fnext">Дальше →</button><button class="say" id="fsay" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TABLE / RESULTS ============ -->
+<section class="sec dark" id="table">
+  <div class="wrap">
+    <h2 class="h2 sp"><b>Результаты</b> антикризисной сессии:</h2>
+    <p class="sub">Та же таблица, которую все боятся. Только теперь видно, где висит флажок. Нажмите на клетку — она скажет фразу.</p>
+    <div class="tabs" id="ttabs"><button class="on" data-t="der">после der</button><button data-t="ein">после ein / kein</button><button data-t="zero">без артикля</button></div>
+    <div class="grid4" id="grid"></div>
+    <div class="legend"><span><i style="background:#4a3529"></i>остров -e</span><span><i style="background:#333"></i>-en</span><span><i style="background:var(--red)"></i>флажок на прилагательном</span><span><i style="background:#6b5513"></i>исключение</span></div>
+    <div class="res">
+      <div class="rs rv" data-r="der"><svg class="ic"><use href="#i-clipboard-list"/></svg><h4>Тактический план после der</h4><p>Остров <b class="peach">-e</b>: пять клеток. Nominativ всех родов плюс Akkusativ женского и среднего. Всё остальное <b>-en</b>. Всё.</p></div>
+      <div class="rs rv" data-r="ein"><svg class="ic"><use href="#i-refresh-cw"/></svg><h4>Взгляд со стороны ein</h4><p>Те же пять клеток. Но в трёх ein молчит: <b class="redt">guter</b> (Nom м.р.), <b class="redt">gutes</b> (Nom и Akk ср.р.). Остальное как после der.</p></div>
+      <div class="rs rv" data-r="zero"><svg class="ic"><use href="#i-handshake"/></svg><h4>Поддержка без артикля</h4><p>Прилагательное надевает окончание артикля: der → <b class="redt">-er</b>, dem → <b class="redt">-em</b>, das → <b class="redt">-es</b>. Кроме Genitiv м. и ср. рода: там <b>-en</b>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURVE (algorithm) ============ -->
+<section class="sec dark" id="plan">
+  <div class="wrap">
+    <h2 class="h2 sp">Поймёте, <b>с чего начать</b> и почему не нужно закрывать тему</h2>
+    <p class="sub">Три вопроса. В таком порядке. Выберите фразу и смотрите, как она проходит маршрут.</p>
+    <div class="curve" id="curve">
+      <svg viewBox="0 0 800 420" preserveAspectRatio="none" aria-hidden="true"><path id="cpath" d="M70 380 C 300 380 420 360 500 240 S 560 60 600 20" fill="none" stroke="rgba(255,255,255,.75)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
+      <div class="cdot" id="cd0"></div><div class="cdot" id="cd1"></div><div class="cdot" id="cd2"></div>
+      <div class="ctxt" id="ct0"><b>1. Есть артикль перед прилагательным?</b><span class="ans"></span></div>
+      <div class="ctxt" id="ct1"><b>2. Он показал род и падеж?</b><span class="ans"></span></div>
+      <div class="ctxt" id="ct2"><b>3. Кто вешает флажок?</b><span class="ans"></span></div>
+      <div class="cchip" id="cchip"></div>
+    </div>
+    <div class="exs" id="exs"></div>
+    <div class="cout" id="cout"></div>
+  </div>
+</section>
+
+<!-- ============ TRAPS ============ -->
+<section class="sec dark" id="traps">
+  <div class="wrap">
+    <h2 class="h2 sp">Мы не работаем <b>по шаблонам</b></h2>
+    <p class="sub">Шесть мест, где ломаются даже на B2. Знать их обязательно.</p>
+    <div class="traps stg">
+      <div class="trap"><h4>После существительного — тишина</h4><p>Прилагательное после глагола окончаний не носит. Лайфхак для паникёров.</p><div class="ex2">Der Wein ist <s>guter</s> <em>gut</em>.<button class="say" data-say="Der Wein ist gut."><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+      <div class="trap"><h4>dieser, jeder, alle — клоны der</h4><p>Ведут себя как der. Флажок на них, прилагательное отдыхает.</p><div class="ex2">diese gute<em>n</em> Weine<button class="say" data-say="diese guten Weine"><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+      <div class="trap"><h4>viele, einige, числа — как пустота</h4><p>Они ничего не показывают. Флажок вешает прилагательное.</p><div class="ex2">viele gute<em>_</em> → drei kalt<em>e</em> Biere<button class="say" data-say="viele gute Weine. drei kalte Biere"><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+      <div class="trap"><h4>Два прилагательных — одна форма</h4><p>Оба получают одинаковое окончание. Никакой дискриминации.</p><div class="ex2">ein klein<em>es</em> neu<em>es</em> Café<button class="say" data-say="ein kleines neues Café"><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+      <div class="trap"><h4>Немецкий экономит буквы</h4><p>dunkel → dunkle, teuer → teure, hoch → hohe. Буква «e» выпадает, «ch» становится «h».</p><div class="ex2">ein teu<em>r</em>es Auto · der hoh<em>e</em> Preis<button class="say" data-say="ein teures Auto. der hohe Preis"><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+      <div class="trap"><h4>Genitiv без артикля</h4><p>Флажок -s уже висит на существительном. Прилагательному остаётся -en.</p><div class="ex2">trotz <s>schlechtes</s> schlecht<em>en</em> Wetters<button class="say" data-say="trotz schlechten Wetters"><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="light sec" id="quiz">
+  <div class="burn t" data-burn="top"></div>
+  <div class="wrap" style="padding-top:40px">
+    <h2 class="h2 sp">Проверка <b>после сессии</b></h2>
+    <p class="sub">Шесть вопросов. Официант смотрит.</p>
+    <div class="qz" id="qz"></div>
+    <h2 class="h2 sp" style="margin-top:70px">Шпаргалка. <b>Повесить у кассы</b></h2>
+    <div class="cheat stg">
+      <div class="cl"><svg class="ic"><use href="#i-crown"/></svg><div><b>der, dieser, alle</b> → остров <em>-e</em> (5 клеток), остальное <em>-en</em></div></div>
+      <div class="cl"><svg class="ic"><use href="#i-circle-help"/></svg><div><b>ein, kein, mein</b> → как der, но gut<em>er</em> (Nom м.р.) и gut<em>es</em> (Nom/Akk ср.р.)</div></div>
+      <div class="cl"><svg class="ic"><use href="#i-zap"/></svg><div><b>нет артикля</b> → окончание der/die/das: gut<em>er</em>, gut<em>e</em>, gut<em>es</em>, gut<em>em</em></div></div>
+      <div class="cl"><svg class="ic"><use href="#i-triangle-alert"/></svg><div><b>Genitiv м./ср. без артикля</b> → <em>-en</em>: wegen schlecht<em>en</em> Wetters</div></div>
+      <div class="cl"><svg class="ic"><use href="#i-check"/></svg><div><b>после глагола</b> → без окончания: der Wein ist gut</div></div>
+    </div>
+  </div>
+  <div class="burn b" data-burn="bottom" data-dark="1"></div>
+</section>
+
+
+
+<section class="dark outro">
+  <div class="wrap">
+    <h2 class="h2 sp">Сессия <b>окончена</b></h2>
+    <p>Окончания выжили. Вино всё ещё кислое.</p>
+    <a class="cta" href="#rule">Пройти правило ещё раз</a>
+  </div>
+</section>
+
+
+<script>
+function xInit(){
+var G = (window.gsap && window.ScrollTrigger) ? gsap : null;
+var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (RM) G = null;
+if (G){ document.documentElement.classList.add('gs'); gsap.registerPlugin(ScrollTrigger); if(window.SplitText) gsap.registerPlugin(SplitText); if(window.MotionPathPlugin) gsap.registerPlugin(MotionPathPlugin); ScrollTrigger.config({ignoreMobileResize:true}); }
+var $ = function(s,r){return (r||document).querySelector(s)}, $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+function whenVisible(el,on,off){ if(!el) return; var io=new IntersectionObserver(function(e){ e[0].isIntersecting?on():off&&off(); },{rootMargin:'100px'}); io.observe(el); }
+
+/* ---------- speech ---------- */
+var synth = window.speechSynthesis, deVoice=null;
+if(!synth) document.body.classList.add('nosp');
+function pickVoice(){ if(!synth) return; var v=synth.getVoices(); deVoice = v.filter(function(x){return /^de(-|_)/i.test(x.lang)})[0]||null; }
+if(synth){ pickVoice(); synth.onvoiceschanged=pickVoice; }
+function say(t){ if(!synth||!t) return; synth.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='de-DE'; u.rate=.88; if(deVoice) u.voice=deVoice; synth.speak(u); }
+document.addEventListener('click',function(e){ var b=e.target.closest('[data-say]'); if(b) say(b.getAttribute('data-say')); });
+
+/* ---------- burnt paper edges ---------- */
+function rnd(seed){ return function(){ seed=(seed*16807)%2147483647; return (seed-1)/2147483646; }; }
+$$('.burn').forEach(function(b,i){
+  var top = b.dataset.burn==='top', dark=b.dataset.dark, R=rnd(9+i*31), pts=[], n=46, y;
+  for(var k=0;k<=n;k++){ y = 60 + Math.sin(k*0.55+i)*14 + (R()-.5)*26 + Math.sin(k*0.13)*16; pts.push([k*1000/n, y]); }
+  var edge = pts.map(function(p,k){return (k?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)}).join(' ');
+  var fill = top ? (dark? '#0c0c0c':'#0c0c0c') : (dark? '#0c0c0c' : '#f5f4f2');
+  // bottom edge: lower part filled with next section colour; top edge: upper part filled with previous section colour
+  var area = top ? edge+' L1000 0 L0 0 Z' : edge+' L1000 120 L0 120 Z';
+  var under = b.parentElement.classList.contains('light') && !top ? '#0c0c0c' : null;
+  b.innerHTML = '<svg viewBox="0 0 1000 120" preserveAspectRatio="none"><defs><filter id="bf'+i+'" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="6"/></filter></defs>'
+   + '<path class="glow" d="'+edge+'" fill="none" stroke="#ff6a1a" stroke-width="16" filter="url(#bf'+i+')" opacity=".9"/>'
+   + '<path d="'+area+'" fill="'+fill+'"/>'
+   + '<path d="'+edge+'" fill="none" stroke="#ffb15c" stroke-width="2.2" opacity=".85" vector-effect="non-scaling-stroke"/>'
+   + '<path d="'+edge+'" fill="none" stroke="#2a0d05" stroke-width="5" opacity=".55" transform="translate(0,'+(top?-3:3)+')" vector-effect="non-scaling-stroke"/></svg>';
+  if(under) b.style.background='transparent';
+});
+
+/* ---------- embers ---------- */
+function embers(cv){
+  if(!cv||RM) return; var cx=cv.getContext('2d'), W,H,P=[],run=false,raf, dpr=Math.min(2,window.devicePixelRatio||1);
+  function size(){ W=cv.clientWidth; H=cv.clientHeight; cv.width=W*dpr; cv.height=H*dpr; cx.setTransform(dpr,0,0,dpr,0,0); }
+  size(); addEventListener('resize',size);
+  var N = innerWidth<700? 38: 80;
+  for(var i=0;i<N;i++) P.push(spawn(true));
+  function spawn(any){ return {x:Math.random()*W, y:any?Math.random()*H:H+10, r:Math.random()*1.8+.4, v:Math.random()*.6+.25, d:Math.random()*Math.PI*2, a:Math.random()*.7+.3}; }
+  function tick(){ cx.clearRect(0,0,W,H); for(var i=0;i<P.length;i++){ var p=P[i]; p.y-=p.v; p.d+=.02; p.x+=Math.sin(p.d)*.4; p.a-=.0016; if(p.y<-10||p.a<=0) P[i]=p=spawn(false);
+      cx.beginPath(); cx.fillStyle='rgba(255,'+(120+((p.r*40)|0))+',40,'+p.a.toFixed(2)+')'; cx.shadowColor='#ff6a1a'; cx.shadowBlur=8; cx.arc(p.x,p.y,p.r,0,7); cx.fill(); }
+    if(run) raf=requestAnimationFrame(tick); }
+  whenVisible(cv.parentElement,function(){ if(!run){run=true;tick();} },function(){ run=false; cancelAnimationFrame(raf); });
+}
+embers($('#emb1')); embers($('#emb2'));
+
+/* ---------- hero bottle label ---------- */
+(function(){
+  var L=[['ein','er','Wein','NOMINATIV'],['der','e','Wein','NOMINATIV'],['mit','em','Wein','DATIV · OHNE ARTIKEL'],['einen','en','Wein','AKKUSATIV'],['','er','Wein','NOMINATIV · OHNE ARTIKEL']], i=0, t;
+  var a=$('#lb1'), e=$('#lb2'), n=$('#lab .l4');
+  function nx(){ i=(i+1)%L.length; var s=L[i];
+    if(G){ gsap.timeline().to([a,e],{rotationX:90,duration:.25,ease:'power2.in'}).add(function(){a.textContent=s[0]||'—';e.textContent=s[1];n.textContent=s[3]+' · 2026';}).to([a,e],{rotationX:0,duration:.6,ease:'elastic.out(1,.45)'}); }
+    else { a.textContent=s[0]||'—'; e.textContent=s[1]; n.textContent=s[3]+' · 2026'; } }
+  whenVisible($('#bottle'),function(){ if(!t) t=setInterval(nx,2200); },function(){ clearInterval(t); t=null; });
+  if(G) gsap.to('#bottle',{y:-12,rotation:-5,duration:2.6,ease:'sine.inOut',yoyo:true,repeat:-1});
+})();
+
+/* ---------- headings split + reveals ---------- */
+if(G){
+  $$('.sp').forEach(function(h){
+    var words;
+    if(window.SplitText){ words = new SplitText(h,{type:'words',wordsClass:'wd'}).words; } else { words=[h]; }
+    gsap.from(words,{yPercent:60,rotation:4,opacity:.15,duration:.8,ease:'back.out(2)',stagger:.05,scrollTrigger:{trigger:h,start:'top 88%'}});
+  });
+  ScrollTrigger.batch('.rv',{start:'top 90%',once:true,onEnter:function(b){ gsap.from(b,{y:50,rotation:1.5,duration:.9,ease:'back.out(1.6)',stagger:.12}); }});
+  $$('.stg').forEach(function(g){ gsap.from(g.children,{y:40,scale:.9,rotation:function(i){return i%2?3:-3},duration:.8,ease:'back.out(2)',stagger:.07,scrollTrigger:{trigger:g,start:'top 85%'}}); });
+  // problem objects: drop + wobble, multi-step
+  ScrollTrigger.create({trigger:'#probs .probs',start:'top 80%',once:true,onEnter:function(){
+    var objs=$$('#probs .obj');
+    gsap.timeline().from(objs,{y:-80,duration:.9,ease:'bounce.out',stagger:.08})
+      .to($$('#probs .obj .ic'),{rotation:function(i){return i%2?-12:12},duration:.25,yoyo:true,repeat:1,stagger:.05},'-=.4')
+      .from($$('#probs .obj em'),{scale:.3,rotation:-90,duration:.6,ease:'elastic.out(1,.4)'},'-=.2');
+  }});
+  // experts: halo then head then chips
+  $$('.ex').forEach(function(ex){
+    gsap.timeline({scrollTrigger:{trigger:ex,start:'top 80%'}})
+      .from($('.halo',ex),{scale:.5,duration:.7,ease:'back.out(2)'})
+      .from($('.suit',ex),{yPercent:60,duration:.5,ease:'power3.out'},'-=.4')
+      .from($('.head',ex),{y:-60,scale:.6,rotation:-20,duration:.9,ease:'elastic.out(1,.5)'},'-=.3')
+      .from($$('.chip',ex),{x:function(i){return i%2?40:-40},duration:.5,ease:'back.out(2)',stagger:.07},'-=.5');
+  });
+  // goal numbers pop
+  gsap.from('.num',{scale:.3,rotation:-180,duration:.9,ease:'elastic.out(1,.45)',stagger:.15,scrollTrigger:{trigger:'.goals',start:'top 85%'}});
+  // flags
+  gsap.from('.flags span',{y:-60,rotation:function(i){return (i-2)*14},duration:.9,ease:'bounce.out',stagger:.08,scrollTrigger:{trigger:'.flags',start:'top 85%'}});
+  gsap.from('.res .rs .ic',{scale:.4,rotation:-30,duration:.8,ease:'back.out(3)',stagger:.12,scrollTrigger:{trigger:'.res',start:'top 85%'}});
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){ScrollTrigger.refresh()});
+}
+
+/* ---------- three sides ellipse ---------- */
+(function(){
+  var box=$('#sidesBox'), p=$('#ellPath'), sp=$('#spark');
+  if(!G||!window.MotionPathPlugin){ sp.style.display='none'; return; }
+  var len=p.getTotalLength(); p.style.strokeDasharray=len; p.style.strokeDashoffset=len;
+  var tl=gsap.timeline({scrollTrigger:{trigger:box,start:'top 75%'}});
+  tl.to(p,{strokeDashoffset:0,duration:1.6,ease:'power2.inOut'})
+    .from('.sides .cent .ic',{rotation:-360,scale:.4,duration:1.1,ease:'back.out(2)'},0)
+    .from('.sd .rc',{scale:.3,duration:.8,ease:'elastic.out(1,.4)',stagger:.25},.6)
+    .from('.sd b,.sd small',{y:20,opacity:.1,duration:.5,stagger:.08},.9);
+  var orbit;
+  function startOrbit(){
+    var r=box.getBoundingClientRect(), vb={w:820,h:440}, sx=r.width/vb.w, sy=r.height/vb.h;
+    var pts=[]; for(var i=0;i<=60;i++){ var pt=p.getPointAtLength(len*i/60); pts.push({x:pt.x*sx,y:pt.y*sy}); }
+    if(orbit) orbit.kill();
+    orbit=gsap.fromTo(sp,{x:pts[0].x,y:pts[0].y},{motionPath:{path:pts,curviness:1.2},duration:7,ease:'none',repeat:-1,paused:true});
+  }
+  startOrbit(); addEventListener('resize',startOrbit);
+  whenVisible(box,function(){orbit&&orbit.play()},function(){orbit&&orbit.pause()});
+})();
+
+/* ---------- flight: signal moves from article to adjective ---------- */
+(function(){
+  var S=[
+    {pre:'',st:'de',fl:'r',st2:'ein',adj:'gut',e:'e',slot:'',noun:'Wein',
+     c:['<b>der gute Wein.</b> Флажок <b class="redt">r</b> висит на артикле. Род и падеж понятны. Прилагательное отдыхает: <b>-e</b>.','Артикль меняется на <b>ein</b>. А ein молчит: мужской? средний? Флажка нет.','Флажок <b class="redt">r</b> перелетает на прилагательное: <b>ein guter Wein</b>.'],
+     s:['der gute Wein','ein','ein guter Wein']},
+    {pre:'',st:'da',fl:'s',st2:'ein',adj:'gut',e:'e',slot:'',noun:'Bier',
+     c:['<b>das gute Bier.</b> Флажок <b class="redt">s</b> на das. Прилагательное: <b>-e</b>.','Вместо das приходит <b>ein</b>. Ein не сообщает, что это средний род.','Флажок <b class="redt">s</b> перелетает: <b>ein gutes Bier</b>. Как das, только в прилагательном.'],
+     s:['das gute Bier','ein','ein gutes Bier']},
+    {pre:'mit',st:'de',fl:'m',st2:'',adj:'gut',e:'e',slot:'n',noun:'Käse',
+     c:['<b>mit dem guten Käse.</b> Флажок <b class="redt">m</b> на dem. Прилагательное вне острова: <b>-en</b>.','Артикль уходит совсем. Остаётся «mit … Käse». Кто покажет Dativ?','Флажок <b class="redt">m</b> садится на прилагательное, «n» уходит: <b>mit gutem Käse</b>.'],
+     s:['mit dem guten Käse','mit','mit gutem Käse']}
+  ];
+  var cur=0, step=0, line=$('#fline'), flyer=$('#flyer'), stage=$('#fstage'), cap=$('#fcap'), bad=$('#qbad'), dots=$$('#fdots i'), auto=null, start=null;
+  function render(){
+    var s=S[cur];
+    line.innerHTML=(s.pre?'<span class="tk">'+s.pre+'</span>':'')
+      +'<span class="tk art" id="tart"><span class="st">'+s.st+'</span><span class="fl sig">'+s.fl+'</span></span>'
+      +'<span class="tk adj">'+s.adj+'<span class="e">'+s.e+'</span><span class="slot">'+s.slot+'</span></span>'
+      +'<span class="tk">'+s.noun+'</span>';
+    bad.classList.remove('on'); flyer.style.opacity=0;
+  }
+  function rel(el){ var a=el.getBoundingClientRect(), b=stage.getBoundingClientRect(); return {x:a.left-b.left,y:a.top-b.top,w:a.width,h:a.height}; }
+  function step1(anim){
+    var s=S[cur], art=$('#tart'), fl=$('.fl',art), st=$('.st',art);
+    start=rel(fl);
+    if(s.st2){ fl.classList.remove('sig'); fl.classList.add('gone');
+      var swap=function(){ st.textContent=s.st2; fl.textContent=''; fl.classList.remove('gone'); };
+      if(anim&&G){ gsap.timeline().to(fl,{y:-30,rotation:25,opacity:0,duration:.45,ease:'power2.in'}).to(st,{rotationX:90,duration:.2},'<').add(swap).to(st,{rotationX:0,duration:.6,ease:'elastic.out(1,.45)'}).set(fl,{clearProps:'all'}); }
+      else swap();
+    } else {
+      if(anim&&G){ gsap.to(art,{y:-40,opacity:0,duration:.45,ease:'power2.in',onComplete:function(){art.classList.add('hide');gsap.set(art,{clearProps:'all'});}}); }
+      else art.classList.add('hide');
+    }
+    bad.classList.add('on');
+    if(anim&&G) gsap.fromTo(bad,{scale:.5},{scale:1,duration:.6,ease:'elastic.out(1,.4)'});
+  }
+  function step2(anim){
+    var s=S[cur], slot=$('.tk.adj .slot',line);
+    var land=function(){ slot.textContent=s.fl; slot.classList.add('sig'); bad.classList.remove('on'); flyer.style.opacity=0; };
+    if(!(anim&&G&&window.MotionPathPlugin)){ land(); return; }
+    var oldN=slot.textContent;
+    var go=function(){
+      slot.textContent=s.fl; slot.style.visibility='hidden';
+      var to=rel(slot); slot.textContent=oldN; slot.style.visibility='';
+      flyer.textContent=s.fl;
+      var mid={x:(start.x+to.x)/2,y:Math.min(start.y,to.y)-70};
+      gsap.timeline()
+        .set(flyer,{opacity:1,x:start.x,y:start.y,scale:1,rotation:0})
+        .to(flyer,{motionPath:{path:[{x:start.x,y:start.y},mid,{x:to.x,y:to.y}],curviness:1.4},rotation:360,duration:1.1,ease:'power2.inOut'})
+        .add(land)
+        .fromTo(slot,{scale:1.8},{scale:1,duration:.7,ease:'elastic.out(1,.4)'});
+    };
+    if(oldN){ gsap.to(slot,{y:30,opacity:0,duration:.35,onComplete:function(){ slot.textContent=''; gsap.set(slot,{clearProps:'all'}); oldN=''; go(); }}); }
+    else go();
+  }
+  function show(n,anim){
+    render(); step=n;
+    if(n>=1) step1(anim&&n===1);
+    if(n>=2){ if(anim&&n===2){ step2(true); } else step2(false); }
+    cap.innerHTML=S[cur].c[n];
+    dots.forEach(function(d,i){d.classList.toggle('on',i===n)});
+    if(anim&&G) gsap.from(cap,{y:14,opacity:.2,duration:.5});
+  }
+  // step 2 needs the article state of step 1 to measure the start point: re-run step1 instantly first
+  function next(){ if(step<2){ if(step===0){ show(1,true);} else { render(); step1(false); step=2; cap.innerHTML=S[cur].c[2]; dots.forEach(function(d,i){d.classList.toggle('on',i===2)}); step2(true); } } else { show(0,true); } }
+  function prev(){ show(Math.max(0,step-1),false); }
+  $('#fnext').onclick=function(){ stopAuto(); next(); };
+  $('#fprev').onclick=function(){ stopAuto(); prev(); };
+  $('#fsay').onclick=function(){ say(S[cur].s[step]); };
+  $$('#ftabs button').forEach(function(b){ b.onclick=function(){ stopAuto(); $$('#ftabs button').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); cur=+b.dataset.s; show(0,true); }; });
+  function stopAuto(){ clearInterval(auto); auto=null; manual=true; }
+  var manual=false;
+  show(0,false);
+  whenVisible($('#fly'),function(){ if(!manual&&!auto&&G) auto=setInterval(function(){ if(step===2){ cur=(cur+1)%S.length; $$('#ftabs button').forEach(function(x,i){x.classList.toggle('on',i===cur)}); show(0,true);} else next(); },2600); },function(){ clearInterval(auto); auto=null; });
+})();
+
+/* ---------- declension grid ---------- */
+(function(){
+  var cols=[['м.р.','Wein'],['ж.р.','Suppe'],['ср.р.','Bier'],['мн.ч.','Weine']], rows=['Nom','Akk','Dat','Gen'];
+  var nouns=[['Wein','Suppe','Bier','Weine'],['Wein','Suppe','Bier','Weine'],['Wein','Suppe','Bier','Weinen'],['Weins','Suppe','Biers','Weine']];
+  var T={
+    der:{a:[['der','die','das','die'],['den','die','das','die'],['dem','der','dem','den'],['des','der','des','der']],
+         e:[['e','e','e','en'],['en','e','e','en'],['en','en','en','en'],['en','en','en','en']],
+         k:[['isl','isl','isl','en'],['en','isl','isl','en'],['en','en','en','en'],['en','en','en','en']]},
+    ein:{a:[['ein','eine','ein','keine'],['einen','eine','ein','keine'],['einem','einer','einem','keinen'],['eines','einer','eines','keiner']],
+         e:[['er','e','es','en'],['en','e','es','en'],['en','en','en','en'],['en','en','en','en']],
+         k:[['sig','isl','sig','en'],['en','isl','sig','en'],['en','en','en','en'],['en','en','en','en']]},
+    zero:{a:[['','','',''],['','','',''],['','','',''],['','','','']],
+         e:[['er','e','es','e'],['en','e','es','e'],['em','er','em','en'],['en','er','en','er']],
+         k:[['sig','sig','sig','sig'],['sig','sig','sig','sig'],['sig','sig','sig','sig'],['exc','sig','exc','sig']]}
+  };
+  var g=$('#grid'), cur='der';
+  function build(t){
+    var d=T[t], h='<div></div>';
+    cols.forEach(function(c){ h+='<div class="gh"><b>'+c[0]+'</b>'+c[1]+'</div>'; });
+    rows.forEach(function(r,ri){ h+='<div class="rh">'+r+'</div>';
+      for(var ci=0;ci<4;ci++){ var a=d.a[ri][ci], e=d.e[ri][ci], full=(a?a+' ':'')+'gut'+e+' '+nouns[ri][ci];
+        h+='<button class="c '+d.k[ri][ci]+'" data-say="'+full+'" title="'+full+'"><small>'+(a||'—')+'</small><b>gut<em>'+e+'</em></b></button>'; } });
+    g.innerHTML=h;
+    $$('.rs').forEach(function(r){ r.classList.toggle('hl',r.dataset.r===t); });
+  }
+  function sw(t,anim){
+    if(anim&&G){ var cells=$$('.c',g);
+      gsap.to(cells,{rotationX:90,duration:.22,ease:'power2.in',stagger:{each:.02,from:'start'},onComplete:function(){ build(t); gsap.from($$('.c',g),{rotationX:-90,duration:.55,ease:'back.out(2)',stagger:{each:.03,grid:[4,4],from:'start'}}); }});
+    } else build(t);
+  }
+  build(cur);
+  $$('#ttabs button').forEach(function(b){ b.onclick=function(){ $$('#ttabs button').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); cur=b.dataset.t; sw(cur,true); manual=true; }; });
+  var manual=false, iv=null, order=['der','ein','zero'];
+  if(G) ScrollTrigger.create({trigger:g,start:'top 80%',once:true,onEnter:function(){ gsap.from($$('.c',g),{rotationX:-90,y:20,duration:.6,ease:'back.out(2)',stagger:{each:.04,grid:[4,4],from:'start'}}); }});
+  whenVisible(g,function(){ if(!manual&&!iv&&G) iv=setInterval(function(){ if(manual){clearInterval(iv);return;} cur=order[(order.indexOf(cur)+1)%3]; $$('#ttabs button').forEach(function(x){x.classList.toggle('on',x.dataset.t===cur)}); sw(cur,true); },5200); },function(){ clearInterval(iv); iv=null; });
+})();
+
+/* ---------- noun logos ---------- */
+(function(){
+  var out=$('#lgout');
+  $$('#logos .lg').forEach(function(b){ b.onclick=function(){ $$('#logos .lg').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); var p=b.dataset.p; out.textContent=p; say(p); if(G) gsap.fromTo(out,{y:16,scale:.8},{y:0,scale:1,duration:.6,ease:'elastic.out(1,.45)'}); }; });
+})();
+
+/* ---------- curve algorithm ---------- */
+(function(){
+  var X=[
+    {q:'mit ___ Kaffee',adj:'heiß',a:['Нет. Только mit','—','Прилагательное: dem → -em'],skip:true,out:['mit heiß','em',' Kaffee']},
+    {q:'ein ___ Auto',adj:'neu',a:['Да: ein','Нет. ein молчит про средний род','Прилагательное: das → -es'],out:['ein neu','es',' Auto']},
+    {q:'die ___ Stadt',adj:'alt',a:['Да: die','Да. Женский, Nominativ','Артикль. Остров → -e'],out:['die alt','e',' Stadt']},
+    {q:'den ___ Mann',adj:'alt',a:['Да: den','Да. Мужской, Akkusativ','Артикль. Вне острова → -en'],out:['den alt','en',' Mann']},
+    {q:'___ Wasser',adj:'kalt',a:['Нет. Пусто','—','Прилагательное: das → -es'],skip:true,out:['kalt','es',' Wasser']},
+    {q:'meinem ___ Bruder',adj:'klein',a:['Да: meinem','Да. Мужской, Dativ','Артикль. Вне острова → -en'],out:['meinem klein','en',' Bruder']}
+  ];
+  var box=$('#curve'), p=$('#cpath'), chip=$('#cchip'), exs=$('#exs'), out=$('#cout'), len=p.getTotalLength(), T=[0.02,0.55,0.97], pos=[], busy=false, played=false;
+  function dims(){ var sv=$('svg',box).getBoundingClientRect(); return {w:sv.width,sx:sv.width/800,sy:sv.height/420}; }
+  function layout(){
+    var d=dims();
+    pos=T.map(function(t){ var pt=p.getPointAtLength(len*t); return {x:pt.x*d.sx,y:pt.y*d.sy}; });
+    pos.forEach(function(q,i){ var e=$('#cd'+i); e.style.left=q.x+'px'; e.style.top=q.y+'px'; });
+    var c0=$('#ct0'),c1=$('#ct1'),c2=$('#ct2');
+    c0.style.left='0'; c0.style.top=(pos[0].y+16)+'px'; c0.style.width=Math.min(d.w*.62,300)+'px';
+    c1.style.left=(pos[1].x+18)+'px'; c1.style.top=(pos[1].y-6)+'px'; c1.style.width=Math.min(d.w-pos[1].x-18,260)+'px';
+    c2.style.width=Math.min(pos[2].x-22,280)+'px'; c2.style.left=(pos[2].x-22-parseFloat(c2.style.width))+'px'; c2.style.top=(pos[2].y-8)+'px'; c2.style.textAlign='right';
+  }
+  layout(); addEventListener('resize',layout);
+  X.forEach(function(x,i){ var b=document.createElement('button'); b.textContent=x.q.replace('___','___ ('+x.adj+')').replace(' ('+x.adj+')',' ')+'('+x.adj+')'; b.textContent=x.q+' · '+x.adj; b.onclick=function(){ run(i); }; exs.appendChild(b); });
+  function run(i){
+    if(busy) return; busy=true; var x=X[i];
+    $$('#exs button').forEach(function(b,k){b.classList.toggle('on',k===i)});
+    $$('.ctxt .ans').forEach(function(a){a.textContent='';});
+    out.innerHTML=''; chip.textContent=x.q.replace('___',x.adj+'?');
+    var fin=function(){ out.innerHTML='<span>'+x.out[0]+'<em>'+x.out[1]+'</em>'+x.out[2]+'</span><button class="say" data-say="'+(x.out.join(''))+'"><svg class="ic"><use href="#i-volume-2"/></svg></button>'; say(x.out.join('')); busy=false; if(G) gsap.from(out.firstChild,{scale:.5,duration:.8,ease:'elastic.out(1,.4)'}); };
+    if(!(G&&window.MotionPathPlugin)){ x.a.forEach(function(t,k){ $('#ct'+k+' .ans').textContent=t; }); fin(); return; }
+    var dd=dims(), sx=dd.sx, sy=dd.sy;
+    function seg(a,b){ var pts=[]; for(var k=0;k<=16;k++){ var pt=p.getPointAtLength(len*(a+(b-a)*k/16)); pts.push({x:pt.x*sx,y:pt.y*sy}); } return pts; }
+    var tl=gsap.timeline({onComplete:fin});
+    tl.set(chip,{opacity:1,x:pos[0].x,y:pos[0].y}).from(chip,{scale:.3,duration:.4,ease:'back.out(3)'})
+      .add(function(){ $('#ct0 .ans').textContent=x.a[0]; }).fromTo('#cd0',{scale:2.2},{scale:1,duration:.6,ease:'elastic.out(1,.4)'});
+    if(x.skip){
+      tl.add(function(){ $('#ct1 .ans').textContent='пропускаем: показывать некому'; },'+=.3')
+        .to(chip,{motionPath:{path:seg(T[0],T[2])},duration:1.5,ease:'power2.inOut'});
+    } else {
+      tl.to(chip,{motionPath:{path:seg(T[0],T[1])},duration:1,ease:'power2.inOut'},'+=.3')
+        .add(function(){ $('#ct1 .ans').textContent=x.a[1]; }).fromTo('#cd1',{scale:2.2},{scale:1,duration:.6,ease:'elastic.out(1,.4)'})
+        .to(chip,{motionPath:{path:seg(T[1],T[2])},duration:1,ease:'power2.inOut'},'+=.3');
+    }
+    tl.add(function(){ $('#ct2 .ans').textContent=x.a[2]; }).fromTo('#cd2',{scale:2.2},{scale:1,duration:.6,ease:'elastic.out(1,.4)'}).to(chip,{opacity:0,y:'-=30',duration:.4});
+  }
+  if(G){
+    var dl=p.getTotalLength(); p.style.strokeDasharray=dl; p.style.strokeDashoffset=dl;
+    ScrollTrigger.create({trigger:box,start:'top 75%',once:true,onEnter:function(){
+      gsap.timeline().to(p,{strokeDashoffset:0,duration:1.6,ease:'power2.inOut'})
+        .from('.cdot',{scale:0.3,duration:.6,ease:'back.out(3)',stagger:.35},.3)
+        .from('.ctxt',{y:20,opacity:.1,duration:.5,stagger:.35},.5)
+        .add(function(){ if(!played){ played=true; run(1); } });
+    }});
+  } else run(1);
+})();
+
+/* ---------- quiz ---------- */
+(function(){
+  var Q=[
+    {q:'Ist das ein ___ Wein?',h:'gut · мужской род · Nominativ',o:['guter','gute','guten'],a:0,x:'<b>ein</b> молчит про род. Флажок вешает прилагательное: <b>guter</b>. Официант доволен.',s:'Ist das ein guter Wein?'},
+    {q:'Ich nehme den ___ Käse.',h:'alt · мужской род · Akkusativ',o:['alte','alten','alter'],a:1,x:'<b>den</b> всё показал. Akkusativ мужского вне острова -e. Значит <b>alten</b>.',s:'Ich nehme den alten Käse.'},
+    {q:'Mit ___ Kaffee schmeckt alles.',h:'heiß · мужской род · Dativ',o:['heißen','heißer','heißem'],a:2,x:'Артикля нет. Dativ мужского это dem. Флажок <b>m</b> на прилагательном: <b>heißem</b>.',s:'Mit heißem Kaffee schmeckt alles.'},
+    {q:'Wir trinken ___ Bier.',h:'kalt · средний род · Akkusativ',o:['kalten','kaltes','kalte'],a:1,x:'Пустота. Akkusativ среднего это das. Значит <b>kaltes</b>.',s:'Wir trinken kaltes Bier.'},
+    {q:'Das ist die ___ Stadt.',h:'alt · женский род · Nominativ',o:['alte','alten','alter'],a:0,x:'<b>die</b> показала всё. Nominativ, остров -e: <b>alte</b>.',s:'Das ist die alte Stadt.'},
+    {q:'Wegen ___ Wetters bleiben wir zu Hause.',h:'schlecht · средний род · Genitiv, без артикля',o:['schlechtes','schlechten','schlechter'],a:1,x:'Ловушка. Genitiv м./ср. без артикля даёт <b>-en</b>. Флажок -s уже висит на Wetters.',s:'Wegen schlechten Wetters bleiben wir zu Hause.'}
+  ];
+  var qz=$('#qz'), i=0, score=0;
+  function draw(){
+    var q=Q[i];
+    qz.innerHTML='<div class="qtop"><span>Вопрос '+(i+1)+' / '+Q.length+'</span><span>Счёт: '+score+'</span></div><div class="qbar"><i style="width:'+(i/Q.length*100)+'%"></i></div>'
+      +'<div class="qq">'+q.q.replace('___','<u>&nbsp;</u>')+'</div><div class="qh">'+q.h+'</div><div class="qo">'+q.o.map(function(o,k){return '<button data-k="'+k+'">'+o+'</button>'}).join('')+'</div><div class="qe" id="qe"></div><button class="cta qn" id="qn">Дальше</button>';
+    $$('.qo button',qz).forEach(function(b){ b.onclick=function(){ answer(+b.dataset.k,b); }; });
+    $('#qn').onclick=function(){ i++; if(i<Q.length) draw(); else done(); };
+    if(G) gsap.from($$('.qq,.qh,.qo button',qz),{y:20,opacity:.2,duration:.45,stagger:.06,ease:'back.out(2)'});
+  }
+  function answer(k,b){
+    var q=Q[i], bs=$$('.qo button',qz); if(bs.some(function(x){return x.disabled})) return;
+    bs.forEach(function(x){x.disabled=true}); bs[q.a].classList.add('ok');
+    if(k===q.a){ score++; if(G) gsap.fromTo(b,{scale:1.08},{scale:1,duration:.6,ease:'elastic.out(1,.4)'}); }
+    else { b.classList.add('no'); if(G) gsap.fromTo(b,{x:-8},{x:0,duration:.5,ease:'elastic.out(1,.3)'}); }
+    $('#qe').innerHTML=(k===q.a?'Верно. ':'Мимо. ')+q.x; $('#qn').classList.add('on'); say(q.s);
+  }
+  function done(){
+    var t= score===6?'Официант кивнул. Можно заказывать.': score>=4?'Почти. Вино нальют, но посмотрят.':'Официант ещё протирает стакан. Пройдите правило ещё раз.';
+    qz.innerHTML='<div class="qfin"><div class="big">'+score+' / '+Q.length+'</div><p>'+t+'</p><button class="cta" id="qr">Ещё раз</button></div>';
+    $('#qr').onclick=function(){ i=0; score=0; draw(); };
+    if(score>=4) confetti();
+  }
+  function confetti(){ var c=['#ff2e1f','#f2a57c','#ffc36b','#111'];
+    for(var k=0;k<60;k++){ var d=document.createElement('i'); d.className='conf'; d.style.left=Math.random()*100+'%'; d.style.background=c[k%4]; qz.appendChild(d);
+      if(G) gsap.to(d,{y:qz.offsetHeight+30,x:(Math.random()-.5)*160,rotation:Math.random()*720,duration:1.6+Math.random(),ease:'power1.in',onComplete:(function(n){return function(){n.remove()}})(d)}); else setTimeout((function(n){return function(){n.remove()}})(d),100); } }
+  draw();
+})();
+
+/* ---------- AD extras ---------- */
+(function(){
+  var dock=$('#dock'), ad=$('#ad');
+  if(dock&&ad){ var io=new IntersectionObserver(function(e){ dock.classList.toggle('on',e[0].isIntersecting); },{rootMargin:'0px 0px -40% 0px'}); io.observe(ad); }
+  $$('.count').forEach(function(c){ var to=+c.dataset.to; if(!G) return; var o={v:0}; c.textContent='0';
+    gsap.to(o,{v:to,duration:2,ease:'power2.out',scrollTrigger:{trigger:c,start:'top 90%'},onUpdate:function(){c.textContent=Math.round(o.v)}}); });
+  var s3=$('#spath');
+  if(s3&&G){ var l=s3.getTotalLength(); s3.style.strokeDasharray=l; s3.style.strokeDashoffset=l;
+    gsap.timeline({scrollTrigger:{trigger:'#steps3',start:'top 75%'}}).to(s3,{strokeDashoffset:0,duration:1.6,ease:'power2.inOut'})
+      .from('.stdot',{scale:.2,duration:.6,ease:'back.out(3)',stagger:.4},.2).from('.st3',{y:20,opacity:.1,duration:.6,stagger:.4},.4); }
+  if(G){ gsap.from('.phone',{y:80,rotation:6,duration:1.2,ease:'back.out(1.6)',scrollTrigger:{trigger:'.phonebox',start:'top 80%'}});
+    gsap.from('.pr',{y:60,rotation:function(i){return [-4,0,4][i]},duration:.9,ease:'back.out(1.8)',stagger:.12,scrollTrigger:{trigger:'.prices',start:'top 85%'}}); }
+})();
+
+/* ---------- lazy videos ---------- */
+(function(){
+  var vs=$$('video[data-src]'); if(!vs.length) return;
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ var v=e.target;
+    if(e.isIntersecting){ if(!v.src){ v.poster=v.dataset.poster; v.src=v.dataset.src; } var p=v.play(); if(p&&p.catch) p.catch(function(){}); } else if(v.src) v.pause(); }); },{rootMargin:'300px 0px'});
+  vs.forEach(function(v){ io.observe(v); });
+  var io2=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ var v=e.target; if(!v.poster) v.poster=v.dataset.poster; io2.unobserve(v);} }); },{rootMargin:'900px 0px'});
+  vs.forEach(function(v){ io2.observe(v); });
+})();
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',xInit); else xInit();
+</script>
+
+</body>
+</html>
