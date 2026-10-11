@@ -36,7 +36,8 @@ button{font-family:inherit;cursor:pointer}
 a{color:inherit}
 .ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px;position:relative}
-.sec{position:relative;padding:72px 0}
+.sec{position:relative;padding:72px 0;overflow-x:clip}
+html{overflow-x:clip}
 .dark{background:var(--bg);background-image:radial-gradient(1200px 600px at 20% 10%,#1d1d1d 0,transparent 60%),radial-gradient(900px 500px at 90% 80%,#181818 0,transparent 60%)}
 .light{background:var(--paper);color:var(--ink);position:relative}
 /* headings: light + bold mix like the reference */
@@ -374,6 +375,108 @@ a{color:inherit}
 @media(min-width:900px){.dock{left:50%;right:auto;width:560px;translate:-50% 140%}.dock.on{translate:-50% 0}}
 .outro{text-align:center;padding:80px 0 60px}
 .outro p{color:#bbb;font-size:18px}
+
+/* ===== v2: progress ===== */
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:linear-gradient(90deg,#ff2e1f,#ff8a2a,#ffc36b);transform-origin:0 50%;transform:scaleX(0);box-shadow:0 0 12px rgba(255,90,30,.8)}
+/* ===== island ===== */
+.isl{position:relative;max-width:620px;margin:30px auto 0;aspect-ratio:360/330;border-radius:22px;overflow:hidden;background:radial-gradient(120% 90% at 50% 40%,#16232a 0,#0d1418 60%,#0b0f12 100%);border:1px solid #1f2a30}
+.isl svg.sea{position:absolute;inset:0;width:100%;height:100%}
+.wv{animation:wave 6s ease-in-out infinite alternate}
+.wv:nth-child(2n){animation-duration:8s;animation-direction:alternate-reverse}
+@keyframes wave{to{translate:-18px 4px}}
+.iflag{position:absolute;translate:-50% -100%;display:flex;flex-direction:column;align-items:center;z-index:3}
+.iflag span{background:#fff;color:#1a1a1a;border-radius:7px;padding:3px 7px;font-size:11.5px;font-weight:700;line-height:1.15;text-align:center;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.iflag span small{display:block;font-size:9px;color:#b4552c;letter-spacing:.06em;font-weight:700}
+.iflag span em{font-style:normal;color:var(--red)}
+.iflag i{width:2px;height:16px;background:#5a3a26}
+.enc{position:absolute;translate:-50% -50%;z-index:3;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#c9d6dc;border-radius:20px;padding:4px 9px;font-size:11.5px;white-space:nowrap}
+.enc em{font-style:normal;color:#8fd3ff;font-weight:700}
+.boat{position:absolute;left:50%;top:86%;translate:-50% -50%;z-index:4;display:flex;flex-direction:column;align-items:center}
+.boat .sail{background:var(--red);color:#fff;font-weight:700;font-size:12px;padding:4px 9px;border-radius:6px 6px 2px 2px;white-space:nowrap;box-shadow:0 0 16px rgba(255,60,30,.6)}
+.boat .hull{width:74px;height:12px;background:#3a2418;border-radius:0 0 30px 30px;margin-top:2px}
+.islnote{max-width:620px;margin:18px auto 0;text-align:center;color:#cfcfcf;font-size:15.5px}
+.islnote b{color:#fff}
+/* ===== transplant ===== */
+.tp{max-width:620px;margin:30px auto 0;background:#121212;border:1px solid #232323;border-radius:16px;padding:22px 14px 18px;position:relative;overflow:hidden;text-align:center}
+.tpstage{position:relative;height:190px}
+.tpart{position:absolute;left:50%;top:6px;translate:-50% 0;font-size:34px;font-weight:700;color:#777;border:1px dashed #444;border-radius:10px;padding:2px 14px;background:#181818}
+.tpart .tend{color:#fff;background:var(--red);border-radius:6px;padding:0 4px;display:inline-block;box-shadow:0 0 20px rgba(255,46,31,.7)}
+.tpart .x{position:absolute;right:-10px;top:-10px;width:22px;height:22px;border-radius:50%;background:#2a2a2a;color:#aaa;font-size:12px;display:flex;align-items:center;justify-content:center}
+.tparrow{position:absolute;left:50%;top:70px;translate:-50% 0;color:#555;font-size:22px}
+.tpline{position:absolute;left:0;right:0;top:112px;font-size:clamp(28px,8vw,44px);font-weight:600;white-space:nowrap}
+.tpline .tpadj{color:var(--peach)}
+.tpslot{display:inline-block;min-width:.3em;border-bottom:3px solid #444;color:#fff}
+.tpslot.on{background:var(--red);border-color:transparent;border-radius:6px;padding:0 .08em;box-shadow:0 0 24px rgba(255,46,31,.7)}
+.tpfly{position:absolute;left:0;top:0;font-size:34px;font-weight:700;color:#fff;background:var(--red);border-radius:6px;padding:0 4px;opacity:0;z-index:3;box-shadow:0 0 30px rgba(255,60,30,.9)}
+.tpcap{min-height:48px;color:#cfcfcf;font-size:15px;margin-top:8px}
+.tpcap b{color:#fff}
+.tpdots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.tpdots button{background:#1c1c1c;border:1px solid #2c2c2c;color:#bbb;border-radius:20px;padding:6px 11px;font-size:13px}
+.tpdots button.on{background:var(--red);border-color:var(--red);color:#fff}
+/* ===== ad v2 ===== */
+.pillk{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a2a22;background:#1a1310;color:var(--peach);border-radius:30px;padding:6px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.adhead{text-align:center}
+.what{display:grid;gap:34px;margin-top:44px;align-items:center}
+.what h3{font-size:clamp(24px,6.4vw,34px);line-height:1.15;margin:14px 0 12px;font-weight:300}
+.what h3 b{font-weight:700}
+.what p{color:#bdbdbd;font-size:16px;margin:0 0 18px}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:center;background:#141414;border:1px solid #222;border-radius:12px;padding:12px 14px;font-size:15px;color:#ddd}
+.facts li .ic{font-size:22px;color:var(--red)}
+.facts li b{color:#fff}
+.devices{position:relative;height:330px}
+.laptop{position:absolute;left:0;right:8%;top:20px}
+.laptop .scr{border:8px solid #1e1e1e;border-bottom-width:12px;border-radius:12px 12px 0 0;overflow:hidden;background:#fff;aspect-ratio:16/10}
+.laptop .scr img{width:100%;height:100%;object-fit:cover;object-position:top}
+.laptop .base{height:10px;margin:0 -6%;background:linear-gradient(180deg,#2a2a2a,#111);border-radius:0 0 12px 12px}
+.mob{position:absolute;right:0;bottom:0;width:31%;max-width:140px;border-radius:18px;padding:5px;background:#0a0a0a;border:1px solid #333;box-shadow:0 20px 40px rgba(0,0,0,.7)}
+.mob img{border-radius:13px;aspect-ratio:9/17;object-fit:cover;object-position:top left;width:100%;background:#fff}
+.tagf{position:absolute;z-index:3;background:#fff;color:#151515;font-size:12px;font-weight:700;border-radius:30px;padding:6px 11px;display:flex;gap:6px;align-items:center;box-shadow:0 10px 24px rgba(0,0,0,.45);white-space:nowrap}
+.tagf .ic{color:var(--red);font-size:14px}
+@media(min-width:900px){.what{grid-template-columns:1fr 1fr}.devices{height:400px}}
+.how{position:relative;display:grid;gap:22px;margin-top:40px;padding-left:0}
+.hline{position:absolute;left:25px;top:30px;bottom:30px;width:2px;background:linear-gradient(180deg,#ff2e1f,#ff8a2a);transform-origin:50% 0}
+.hw{position:relative;display:flex;gap:16px;align-items:flex-start}
+.hw .rc{margin:0;flex:none}
+.hw h4{margin:4px 0 4px;font-size:18px;display:flex;gap:8px;align-items:center}
+.hw h4 .ic{color:var(--peach)}
+.hw p{margin:0;color:#aaa;font-size:14.5px}
+@media(min-width:900px){.how{grid-template-columns:repeat(3,1fr)}.hline{left:30px;right:30px;top:25px;bottom:auto;width:auto;height:2px;transform-origin:0 50%}.hw{flex-direction:column}}
+.anat{display:grid;gap:26px;margin-top:40px;align-items:center}
+.stack{position:relative;height:330px;max-width:420px;width:100%;margin:0 auto}
+.lay{position:absolute;left:0;right:0;height:120px;border-radius:14px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 18px 40px -10px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.08)}
+.lay .ic{font-size:26px;flex:none}
+.lay b{display:block;font-size:16px}
+.lay small{display:block;font-size:13px;opacity:.75;margin-top:2px}
+.lay .ln{height:7px;border-radius:4px;background:currentColor;opacity:.15;margin-top:8px}
+.lay:nth-child(1){top:0;background:#1d1d1d;color:#fff;z-index:1}
+.lay:nth-child(2){top:70px;background:#262626;color:#fff;z-index:2}
+.lay:nth-child(3){top:140px;background:#f2a57c;color:#2a120a;z-index:3}
+.lay:nth-child(4){top:210px;background:linear-gradient(135deg,#ff4a3b,#d8170a);color:#fff;z-index:4}
+.lay.hi{outline:2px solid #fff;outline-offset:2px}
+.anatxt{color:#cfcfcf;font-size:15.5px}
+.anatxt b{color:#fff}
+@media(min-width:900px){.anat{grid-template-columns:1fr 1fr}}
+.picker{max-width:720px;margin:34px auto 0}
+.pbtns{display:grid;gap:10px}
+.pbtns button{display:flex;gap:12px;align-items:center;text-align:left;background:#141414;border:1px solid #2a2a2a;color:#eee;border-radius:12px;padding:14px 16px;font-size:16px;transition:border-color .2s,background .2s}
+.pbtns button .ic{font-size:24px;color:var(--peach)}
+.pbtns button small{display:block;color:#888;font-size:13px}
+.pbtns button.on{border-color:var(--red);background:#1f0d0b}
+.pres{margin-top:14px;border-radius:14px;padding:20px;background:linear-gradient(180deg,#2a0d0a,#141414);border:1px solid #5a1d17;display:none}
+.pres.on{display:block}
+.pres h4{margin:0 0 6px;font-size:20px}
+.pres p{margin:0 0 14px;color:#cfcfcf}
+.pres .cta{width:100%}
+@media(min-width:900px){.pbtns{grid-template-columns:repeat(3,1fr)}.pbtns button{flex-direction:column;align-items:flex-start}}
+.faq{max-width:760px;margin:34px auto 0;display:grid;gap:10px}
+.faq details{background:#141414;border:1px solid #232323;border-radius:12px;padding:0 16px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 0;font-weight:600;font-size:16px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{transition:rotate .3s;color:var(--peach);flex:none}
+.faq details[open] summary .ic{rotate:180deg}
+.faq details p{margin:0 0 16px;color:#bdbdbd;font-size:15px}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -438,7 +541,21 @@ a{color:inherit}
 <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
 <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
 <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+<symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+<symbol id="i-list-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol>
+<symbol id="i-sailboat" viewBox="0 0 24 24"><path d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z"/><path d="M21 14 10 2 3 14h18Z"/><path d="M10 2v16"/></symbol>
+<symbol id="i-infinity" viewBox="0 0 24 24"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+<symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+<symbol id="i-film" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></symbol>
+<symbol id="i-mouse-pointer-click" viewBox="0 0 24 24"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></symbol>
 </svg>
+<div class="prog" id="prog"></div>
 
 <!-- ============ HERO ============ -->
 <header class="hero">
@@ -626,6 +743,44 @@ a{color:inherit}
   </div>
 </section>
 
+
+<!-- ============ ISLAND (weak) ============ -->
+<section class="sec dark" id="island">
+  <div class="wrap">
+    <h2 class="h2 sp">После der есть <b>остров -e</b></h2>
+    <p class="sub">Пять форм живут на острове с окончанием -e. Всё остальное — море -en. Запоминайте остров, а не таблицу.</p>
+    <div class="isl" id="isl">
+      <svg class="sea" viewBox="0 0 360 330" preserveAspectRatio="none" aria-hidden="true">
+        <defs><radialGradient id="sand" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#ffd2ac"/><stop offset=".7" stop-color="#f2a57c"/><stop offset="1" stop-color="#c96a3e"/></radialGradient></defs>
+        <g fill="none" stroke="rgba(143,211,255,.13)" stroke-width="1.4">
+          <path class="wv" d="M-20 40 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+          <path class="wv" d="M-20 95 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+          <path class="wv" d="M-20 250 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+          <path class="wv" d="M-20 300 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/>
+        </g>
+        <g id="islandG">
+          <ellipse cx="180" cy="178" rx="128" ry="74" fill="rgba(143,211,255,.12)"/>
+          <path d="M70 180 C 70 120 140 104 190 110 C 250 116 300 140 296 182 C 292 226 236 246 176 244 C 112 242 70 226 70 180 Z" fill="url(#sand)"/>
+          <path d="M262 132 c-4 -22 -2 -40 4 -52" stroke="#6b3d22" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M266 80 c-14 -6 -26 -2 -34 6 M266 80 c12 -10 26 -10 34 -2 M266 80 c-6 -12 -2 -22 6 -28 M266 80 c4 -12 16 -18 26 -16" stroke="#3f8a4a" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="iflag" style="left:31%;top:46%"><span><small>NOM · м.р.</small>der gut<em>e</em></span><i></i></div>
+      <div class="iflag" style="left:52%;top:42%"><span><small>NOM · ж.р.</small>die gut<em>e</em></span><i></i></div>
+      <div class="iflag" style="left:72%;top:52%"><span><small>NOM · ср.р.</small>das gut<em>e</em></span><i></i></div>
+      <div class="iflag" style="left:39%;top:66%"><span><small>AKK · ж.р.</small>die gut<em>e</em></span><i></i></div>
+      <div class="iflag" style="left:61%;top:70%"><span><small>AKK · ср.р.</small>das gut<em>e</em></span><i></i></div>
+      <div class="enc" style="left:18%;top:9%">dem gut<em>en</em></div>
+      <div class="enc" style="left:80%;top:10%">des gut<em>en</em></div>
+      <div class="enc" style="left:50%;top:18%">der gut<em>en</em> <small>(Dat ж.)</small></div>
+      <div class="enc" style="left:17%;top:88%">die gut<em>en</em> <small>(мн.)</small></div>
+      <div class="enc" style="left:84%;top:90%">den gut<em>en</em> <small>(мн. Dat)</small></div>
+      <div class="boat" id="boat"><div class="sail">den guten Wein</div><div class="hull"></div></div>
+    </div>
+    <p class="islnote rv">Единственный мужчина, которого выгнали с острова: <b>den guten Wein</b>. Akkusativ мужского рода. Он плавает в море -en. Запомните его в лицо.</p>
+  </div>
+</section>
+
 <!-- ============ TABLE / RESULTS ============ -->
 <section class="sec dark" id="table">
   <div class="wrap">
@@ -638,6 +793,26 @@ a{color:inherit}
       <div class="rs rv" data-r="der"><svg class="ic"><use href="#i-clipboard-list"/></svg><h4>Тактический план после der</h4><p>Остров <b class="peach">-e</b>: пять клеток. Nominativ всех родов плюс Akkusativ женского и среднего. Всё остальное <b>-en</b>. Всё.</p></div>
       <div class="rs rv" data-r="ein"><svg class="ic"><use href="#i-refresh-cw"/></svg><h4>Взгляд со стороны ein</h4><p>Те же пять клеток. Но в трёх ein молчит: <b class="redt">guter</b> (Nom м.р.), <b class="redt">gutes</b> (Nom и Akk ср.р.). Остальное как после der.</p></div>
       <div class="rs rv" data-r="zero"><svg class="ic"><use href="#i-handshake"/></svg><h4>Поддержка без артикля</h4><p>Прилагательное надевает окончание артикля: der → <b class="redt">-er</b>, dem → <b class="redt">-em</b>, das → <b class="redt">-es</b>. Кроме Genitiv м. и ср. рода: там <b>-en</b>.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ TRANSPLANT (strong) ============ -->
+<section class="sec dark" id="transplant">
+  <div class="wrap">
+    <h2 class="h2 sp">Артикля нет? <b>Окончание пересаживают</b></h2>
+    <p class="sub">Артикль уходит, а его окончание переезжает на прилагательное. Как пересадка органа, только без больницы.</p>
+    <div class="tp" id="tp">
+      <div class="tpstage" id="tpstage">
+        <div class="tpart" id="tpart"><span class="tst">de</span><span class="tend">r</span><span class="x">✕</span></div>
+        <div class="tparrow"><svg class="ic"><use href="#i-arrow-down"/></svg></div>
+        <div class="tpline" id="tpline"></div>
+        <div class="tpfly" id="tpfly">r</div>
+      </div>
+      <div class="tpcap" id="tpcap"></div>
+      <div class="tpdots" id="tpdots"></div>
+      <div style="margin-top:12px"><button class="say" id="tpsay" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
     </div>
   </div>
 </section>
@@ -700,30 +875,55 @@ a{color:inherit}
 <section class="sec dark ad" id="ad">
   <canvas class="embers" id="emb2"></canvas>
   <div class="wrap" style="z-index:2">
-    <h2 class="h2 sp">Получите <b>доступ к платформе</b> Stellas навсегда</h2>
-    <p class="sub">Этот гайд вы прочитали за 10 минут. На платформе таких больше трёхсот.</p>
-    <div class="adgrid">
-      <div class="steps3" id="steps3">
-        <svg viewBox="0 0 400 340" preserveAspectRatio="none" aria-hidden="true"><path id="spath" d="M30 300 C 160 300 230 280 270 200 S 300 50 330 20" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
-        <div class="stdot" style="left:7.5%;top:88%"></div><div class="stdot" style="left:66%;top:60%"></div><div class="stdot" style="left:82%;top:7%"></div>
-        <div class="st3" style="left:2%;top:91%">Определяете свой уровень. <b>A0–A2 или B1–C1</b></div>
-        <div class="st3" style="left:4%;top:44%;text-align:right;max-width:58%">Идёте по гайдам <b>в правильном порядке</b>. Без 14 открытых вкладок</div>
-        <div class="st3" style="left:4%;top:0%;text-align:right;max-width:72%">Поймёте, с чего начать и почему <b>не нужно бросать немецкий</b></div>
+    <div class="adhead"><span class="pillk"><svg class="ic"><use href="#i-sparkles"/></svg>Реклама. Короткая и честная</span></div>
+    <h2 class="h2 sp" style="margin-top:16px">Понравилось? <b>Это один гайд из 300+</b></h2>
+    <p class="sub">Его сделала команда Stellas. Ниже за минуту: что это, как работает и сколько стоит.</p>
+
+    <div class="what">
+      <div class="rv">
+        <span class="pillk">Что это</span>
+        <h3><b>Stellas</b> — онлайн-платформа для немецкого <b>от A0 до C1</b></h3>
+        <p>Грамматика, слова, фразы для жизни в Германии и подготовка к экзаменам. В одном месте и в правильном порядке. Объяснения на русском.</p>
+        <ul class="facts">
+          <li><svg class="ic"><use href="#i-wallet"/></svg><span><b>30 € один раз</b> за весь путь A0–C1. Не в месяц</span></li>
+          <li><svg class="ic"><use href="#i-infinity"/></svg><span><b>Доступ навсегда</b>. Обновления бесплатно</span></li>
+          <li><svg class="ic"><use href="#i-wifi-off"/></svg><span>Работает в <b>Notion</b>: телефон, ноутбук, даже офлайн</span></li>
+        </ul>
       </div>
-      <div class="phonebox">
-        <div class="glowbase" style="bottom:110px"></div>
-        <div class="flames"><svg viewBox="0 0 320 300" aria-hidden="true"><path class="fl1" fill="url(#fg1)" d="M70 300C30 250 40 190 80 150c-5 40 15 60 25 62-10-60 30-110 70-140-20 60 10 90 30 110 5-30 20-45 35-55-10 50 40 90 20 173z"/><path class="fl3" fill="url(#fg2)" opacity=".9" d="M110 300c-20-40-5-80 20-100 0 25 10 35 18 35-2-35 15-60 40-75-8 40 25 70 10 140z"/><path class="fl2" fill="url(#fg1)" opacity=".8" d="M180 300c-30-40-20-90 10-120 0 30 15 40 20 40 0-40 20-70 50-90-15 50 30 80 20 170z"/></svg></div>
-        <div class="phone"><video muted loop playsinline preload="none" data-src="media/v-app.mp4" data-poster="media/v-app.jpg"></video></div>
-        <div class="form">
-          <p><b>Оставьте заявку</b> и наш ассистент свяжется с вами.<br>Шучу. Ассистента нет. Отвечаю я.</p>
-          <div class="fakein"><svg class="ic"><use href="#i-wine"/></svg>A0–C1 · <b>30 €</b> · навсегда</div>
-          <a class="cta wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить доступ</a>
-          <small>Нажимая на кнопку, вы соглашаетесь, что «ein gute Wein» больше не скажете</small>
-        </div>
+      <div class="devices" id="devices">
+        <div class="laptop"><div class="scr"><img loading="lazy" src="media/s-home.webp" alt="Главная страница платформы Stellas в Notion"></div><div class="base"></div></div>
+        <div class="mob"><img loading="lazy" src="media/v-app.jpg" alt="Словарь Stellas на телефоне"></div>
+        <span class="tagf" style="left:2%;top:0"><svg class="ic"><use href="#i-book-open"/></svg>Грамматика</span>
+        <span class="tagf" style="left:46%;top:-6px"><svg class="ic"><use href="#i-volume-2"/></svg>2500+ слов с озвучкой</span>
+        <span class="tagf" style="left:0;top:58%"><svg class="ic"><use href="#i-graduation-cap"/></svg>Экзамены</span>
+        <span class="tagf" style="left:22%;top:80%"><svg class="ic"><use href="#i-chart-line"/></svg>Трекер</span>
+        <span class="tagf" style="left:40%;top:44%"><svg class="ic"><use href="#i-film"/></svg>Фильмы и подкасты</span>
       </div>
     </div>
 
-    <h2 class="h2 sp" style="margin-top:90px">Немецкий портит жизнь <b>в мелочах</b></h2>
+    <h2 class="h2 sp" style="margin-top:90px">Как это работает: <b>3 шага</b></h2>
+    <div class="how" id="how">
+      <div class="hline" id="hline"></div>
+      <div class="hw"><div class="rc">1</div><div><h4><svg class="ic"><use href="#i-wallet"/></svg>Оплачиваете один раз</h4><p>20 € за уровень (A0–A2 или B1–C1) или 30 € за оба. Без подписки.</p></div></div>
+      <div class="hw"><div class="rc">2</div><div><h4><svg class="ic"><use href="#i-key"/></svg>Получаете доступ</h4><p>Платформа открывается в Notion: в браузере или в приложении на телефоне.</p></div></div>
+      <div class="hw"><div class="rc">3</div><div><h4><svg class="ic"><use href="#i-rocket"/></svg>Учитесь по шагам</h4><p>Открываете тему, читаете, слушаете, делаете упражнения. Прогресс видно в трекере.</p></div></div>
+    </div>
+
+    <h2 class="h2 sp" style="margin-top:90px">Из чего состоит <b>каждый гайд</b></h2>
+    <div class="anat">
+      <div class="stack" id="stack">
+        <div class="lay"><svg class="ic"><use href="#i-book-open"/></svg><div style="flex:1"><b>1. Объяснение</b><small>Простыми словами, как эта страница</small><div class="ln"></div></div></div>
+        <div class="lay"><svg class="ic"><use href="#i-video"/></svg><div style="flex:1"><b>2. Видео</b><small>Если читать не хочется</small><div class="ln"></div></div></div>
+        <div class="lay"><svg class="ic"><use href="#i-list-checks"/></svg><div style="flex:1"><b>3. Упражнения</b><small>Сразу закрепить тему</small><div class="ln"></div></div></div>
+        <div class="lay"><svg class="ic"><use href="#i-circle-check"/></svg><div style="flex:1"><b>4. Ответы с разбором</b><small>Не просто «неверно», а почему</small><div class="ln"></div></div></div>
+      </div>
+      <div class="anatxt rv">
+        <p>Каждая тема собрана одинаково. Не надо искать объяснение на YouTube, упражнения на третьем сайте, а ответы — нигде.</p>
+        <div class="bro"><div class="bar"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" data-src="media/v-notion.mp4" data-poster="media/v-notion.jpg"></video></div>
+      </div>
+    </div>
+
+    <h2 class="h2 sp" style="margin-top:90px">Зачем это вам. <b>Немецкий портит жизнь в мелочах</b></h2>
     <p class="sub">Не в учебнике. В обычный вторник.</p>
     <div class="pains">
       <article class="pain rv"><div class="ph"><div class="ava" style="background-image:url(media/logo.webp)"></div><b>stellasdeutsch</b><span>1/4</span></div><p>Созвон по работе. Коллега говорит длинное предложение. Вы ждёте паузу, чтобы вставить своё.</p><p>Пауза не наступает. Встреча заканчивается. Ваше своё остаётся у вас.</p></article>
@@ -739,30 +939,22 @@ a{color:inherit}
       <div class="cn"><b><span class="count" data-to="100">100</span><i>+</i></b><span>студентов прошли наши разговорные клубы</span></div>
     </div>
 
-    <h2 class="h2 sp" style="margin-top:90px">Что внутри. <b>Без обещаний</b>, просто покажу</h2>
+    <h2 class="h2 sp" style="margin-top:90px">Что ещё внутри. <b>Просто покажу</b></h2>
     <div class="inside">
-      <div class="feat rv"><h4>Гайды по грамматике в Notion</h4><p>Как этот, только их больше трёхсот. В каждом:</p>
-        <ul><li><svg class="ic"><use href="#i-check"/></svg>объяснение, как на канале</li><li><svg class="ic"><use href="#i-check"/></svg>видео</li><li><svg class="ic"><use href="#i-check"/></svg>упражнения с ответами и разбором, почему так</li></ul>
-        <div class="bro"><div class="bar"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" data-src="media/v-notion.mp4" data-poster="media/v-notion.jpg"></video></div></div>
-      <div class="feat rv"><h4>Интерактивные версии в Gemini</h4><p>Те же темы, только живые. Как таблица выше, только по всей грамматике.</p>
+      <div class="feat rv"><h4>Интерактивные версии в Gemini</h4><p>Те же темы, только живые. Как таблица выше, но по всей грамматике.</p>
         <ul><li><svg class="ic"><use href="#i-volume-2"/></svg>озвучка каждого немецкого слова</li><li><svg class="ic"><use href="#i-bot"/></svg>три упражнения с проверкой от ИИ</li><li><svg class="ic"><use href="#i-sparkles"/></svg>визуальные схемы, а не простыни текста</li></ul>
         <div class="bro"><div class="bar"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" data-src="media/v-magic.mp4" data-poster="media/v-magic.jpg"></video></div></div>
       <div class="feat rv"><h4>Лексика под экзамены B1–C1</h4><p>Темы, которые реально встречаются на TestDaF, Goethe C1 и telc.</p>
-        <ul><li><svg class="ic"><use href="#i-book-open"/></svg>20+ слов и 15 фраз, МФА, примеры, озвучка</li><li><svg class="ic"><use href="#i-file-text"/></svg>аутентичный текст: нажал на предложение — перевод</li><li><svg class="ic"><use href="#i-message-circle"/></svg>чат с ИИ-собеседником в образе: строгий, дружелюбный, сложный</li></ul>
+        <ul><li><svg class="ic"><use href="#i-book-open"/></svg>20+ слов и 15 фраз, МФА, примеры, озвучка</li><li><svg class="ic"><use href="#i-file-text"/></svg>аутентичный текст: нажал на предложение — перевод</li><li><svg class="ic"><use href="#i-message-circle"/></svg>чат с ИИ-собеседником в образе</li></ul>
         <div class="bro"><div class="bar"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" data-src="media/v-vocab.mp4" data-poster="media/v-vocab.jpg"></video></div></div>
-      <div class="feat rv"><h4>Работает без интернета</h4><p>Платформа сделана в Notion. Скачиваете приложение на телефон или ноутбук — и заходите офлайн. В U-Bahn, в самолёте, в очереди в Bürgeramt.</p>
-        <ul><li><svg class="ic"><use href="#i-wifi-off"/></svg>офлайн на телефоне и ноутбуке</li><li><svg class="ic"><use href="#i-chart-line"/></svg>трекер прогресса, флеш-карты, диалоги</li><li><svg class="ic"><use href="#i-graduation-cap"/></svg>фильмы, книги, подкасты по уровням</li></ul>
-        <div class="bro"><div class="bar"><i></i><i></i><i></i></div><img loading="lazy" src="media/s-tracker.webp" alt="Трекер прогресса в Notion"></div></div>
     </div>
-
     <div class="shots">
-      <figure><img loading="lazy" src="media/s-home.webp" alt="Главная страница платформы A0–A2"><figcaption>Главная A0–A2</figcaption></figure>
       <figure><img loading="lazy" src="media/s-exams.webp" alt="Раздел экзаменов"><figcaption>Экзамены: Goethe, telc, DTZ, ÖSD, TestDaF</figcaption></figure>
       <figure><img loading="lazy" src="media/s-work.webp" alt="Лексика для работы"><figcaption>Лексика для работы и жизни в Германии</figcaption></figure>
+      <figure><img loading="lazy" src="media/s-tracker.webp" alt="Трекер прогресса"><figcaption>Трекер: видно, что пройдено</figcaption></figure>
       <figure><img loading="lazy" src="media/s-kh.webp" alt="Гайд Im Krankenhaus в Gemini"><figcaption>Im Krankenhaus: словарь, история, диалоги</figcaption></figure>
       <figure><img loading="lazy" src="media/s-baeck.webp" alt="Гайд Die Bäckerei в Gemini"><figcaption>Die Bäckerei: слова с озвучкой</figcaption></figure>
-      <figure><img loading="lazy" src="media/s-chat.webp" alt="Чат-диалог"><figcaption>Диалоги, где можно ответить самому</figcaption></figure>
-      <figure><img loading="lazy" src="media/s-quiz.webp" alt="Тест с объяснениями"><figcaption>Тест с разбором, почему ответ неверный</figcaption></figure>
+      <figure><img loading="lazy" src="media/s-quiz.webp" alt="Тест с объяснениями"><figcaption>Тест с разбором ошибок</figcaption></figure>
     </div>
 
     <h2 class="h2 sp" style="margin-top:80px">Что пишут <b>те, кто уже внутри</b></h2>
@@ -773,6 +965,38 @@ a{color:inherit}
       <img loading="lazy" src="media/rev-r2.webp" alt="Отзыв ученицы">
     </div>
 
+    <h2 class="h2 sp" style="margin-top:90px">Какой уровень <b>вам подходит?</b></h2>
+    <p class="sub">Нажмите на то, что про вас.</p>
+    <div class="picker">
+      <div class="pbtns" id="pbtns">
+        <button data-l="0"><svg class="ic"><use href="#i-sprout"/></svg><span>Начинаю с нуля<small>или знаю пару фраз</small></span></button>
+        <button data-l="1"><svg class="ic"><use href="#i-message-circle"/></svg><span>База есть, хочу говорить<small>A2–B1, путаюсь в окончаниях</small></span></button>
+        <button data-l="2"><svg class="ic"><use href="#i-graduation-cap"/></svg><span>Готовлюсь к экзамену<small>B1, B2, C1, работа, учёба</small></span></button>
+      </div>
+      <div class="pres" id="pres"><h4 id="presT"></h4><p id="presP"></p><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener" id="presB">Получить доступ</a></div>
+    </div>
+
+    <div class="adgrid" style="margin-top:80px">
+      <div class="steps3" id="steps3">
+        <svg viewBox="0 0 400 340" preserveAspectRatio="none" aria-hidden="true"><path id="spath" d="M30 300 C 160 300 230 280 270 200 S 300 50 330 20" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
+        <div class="stdot" style="left:7.5%;top:88%"></div><div class="stdot" style="left:66%;top:60%"></div><div class="stdot" style="left:82%;top:7%"></div>
+        <div class="st3" style="left:2%;top:91%">Выбираете уровень. <b>A0–A2, B1–C1 или всё сразу</b></div>
+        <div class="st3" style="left:4%;top:44%;text-align:right;max-width:58%">Идёте по гайдам <b>по порядку</b>, а не по 14 вкладкам</div>
+        <div class="st3" style="left:4%;top:0%;text-align:right;max-width:72%">Говорите <b>guter Wein</b>, а не gute Wein. И не только это</div>
+      </div>
+      <div class="phonebox">
+        <div class="glowbase" style="bottom:110px"></div>
+        <div class="flames"><svg viewBox="0 0 320 300" aria-hidden="true"><path class="fl1" fill="url(#fg1)" d="M70 300C30 250 40 190 80 150c-5 40 15 60 25 62-10-60 30-110 70-140-20 60 10 90 30 110 5-30 20-45 35-55-10 50 40 90 20 173z"/><path class="fl3" fill="url(#fg2)" opacity=".9" d="M110 300c-20-40-5-80 20-100 0 25 10 35 18 35-2-35 15-60 40-75-8 40 25 70 10 140z"/><path class="fl2" fill="url(#fg1)" opacity=".8" d="M180 300c-30-40-20-90 10-120 0 30 15 40 20 40 0-40 20-70 50-90-15 50 30 80 20 170z"/></svg></div>
+        <div class="phone"><video muted loop playsinline preload="none" data-src="media/v-app.mp4" data-poster="media/v-app.jpg"></video></div>
+        <div class="form">
+          <p><b>Одна кнопка</b>. Без звонков ассистента.<br>Ассистента нет. Отвечаю я.</p>
+          <div class="fakein"><svg class="ic"><use href="#i-wine"/></svg>A0–C1 · <b>30 €</b> · навсегда</div>
+          <a class="cta wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить доступ</a>
+          <small>Нажимая на кнопку, вы соглашаетесь больше не говорить «ein gute Wein»</small>
+        </div>
+      </div>
+    </div>
+
     <h2 class="h2 sp" style="margin-top:90px">Цена. <b>Один раз и навсегда</b></h2>
     <p class="sub">Без подписки. Все обновления для купивших бесплатно.</p>
     <div class="prices">
@@ -780,7 +1004,16 @@ a{color:inherit}
       <div class="pr best rv"><span class="tag">ВЫГОДНЕЕ ВСЕГО</span><h4>A0 – C1 · обе платформы</h4><div class="p"><s>40 €</s>30 €</div><ul><li>всё от нуля до C1</li><li>раздел экзаменов</li><li>+ A0–A2 на украинском в подарок</li></ul><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить доступ</a></div>
       <div class="pr rv"><h4>B1 – C1</h4><div class="p">20 €</div><ul><li>для тех, кто уже в теме</li><li>интерактивные гайды под экзамены</li><li>доступ навсегда</li></ul><a class="ghost" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Выбрать</a></div>
     </div>
-    <p class="sub" style="margin-top:22px">Цену я планирую поднять после следующих обновлений. Кто купил раньше — платит один раз.</p>
+    <p class="sub" style="margin-top:22px">Цену я планирую поднять после следующих обновлений. Кто купил раньше, платит один раз.</p>
+
+    <h2 class="h2 sp" style="margin-top:90px">Частые <b>вопросы</b></h2>
+    <div class="faq">
+      <details><summary>Это подписка?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><p>Нет. Платите один раз: 20 € за уровень или 30 € за A0–C1. Доступ навсегда, новые гайды и обновления бесплатно.</p></details>
+      <details><summary>Это курс с преподавателем?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><p>Нет. Это платформа с гайдами, по которой вы идёте сами, в своём темпе. Вопросы до покупки можно задать в Telegram @stellasdeutsch.</p></details>
+      <details><summary>На каком языке объяснения?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><p>На русском. С пакетом A0–C1 в подарок идёт платформа A0–A2 на украинском.</p></details>
+      <details><summary>Как я буду заниматься?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><p>Платформа сделана в Notion. Открываете её в браузере или скачиваете приложение Notion на телефон и ноутбук. Там она работает и офлайн.</p></details>
+      <details><summary>Какой уровень брать?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><p>С нуля или до A2 — A0–A2. Уже говорите и хотите B2, C1 или экзамен — B1–C1. Не уверены — берите обе за 30 €, это дешевле, чем по отдельности.</p></details>
+    </div>
 
     <div class="foot">
       Платформу, кстати, я не закрыл.<br>
@@ -789,7 +1022,7 @@ a{color:inherit}
     </div>
   </div>
 </section>
-<div class="dock" id="dock"><span><b>A0–C1 · 30 €</b>навсегда, без подписки</span><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить</a></div>
+<div class="dock" id="dock"><span><b>Stellas A0–C1 · 30 €</b>платформа немецкого, навсегда</span><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить</a></div>
 
 
 
@@ -1135,6 +1368,92 @@ if(G){
       .from('.stdot',{scale:.2,duration:.6,ease:'back.out(3)',stagger:.4},.2).from('.st3',{y:20,opacity:.1,duration:.6,stagger:.4},.4); }
   if(G){ gsap.from('.phone',{y:80,rotation:6,duration:1.2,ease:'back.out(1.6)',scrollTrigger:{trigger:'.phonebox',start:'top 80%'}});
     gsap.from('.pr',{y:60,rotation:function(i){return [-4,0,4][i]},duration:.9,ease:'back.out(1.8)',stagger:.12,scrollTrigger:{trigger:'.prices',start:'top 85%'}}); }
+})();
+
+
+/* ---------- v2: progress ---------- */
+(function(){ var pr=$('#prog'); if(!pr) return;
+  if(G){ gsap.to(pr,{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:.3}}); }
+  else addEventListener('scroll',function(){ var h=document.documentElement; pr.style.transform='scaleX('+(scrollY/(h.scrollHeight-innerHeight))+')'; },{passive:true});
+})();
+
+/* ---------- v2: island ---------- */
+(function(){
+  var box=$('#isl'); if(!box||!G) return;
+  var tl=gsap.timeline({scrollTrigger:{trigger:box,start:'top 75%'}});
+  tl.from('#islandG',{scale:.3,y:60,transformOrigin:'50% 60%',duration:1,ease:'back.out(1.8)'})
+    .from($$('.iflag',box),{y:-50,scale:.4,duration:.8,ease:'bounce.out',stagger:.15},'-=.3')
+    .from($$('.enc',box),{scale:.3,opacity:0,duration:.6,ease:'back.out(3)',stagger:.08},'-=.3')
+    .from('#boat',{x:-200,duration:1.2,ease:'power2.out'},'-=.2');
+  var loops=[gsap.to($$('.enc',box),{y:function(i){return i%2?8:-8},duration:2.2,ease:'sine.inOut',yoyo:true,repeat:-1,stagger:.3,paused:true}),
+    gsap.to('#boat',{rotation:6,duration:1.4,ease:'sine.inOut',yoyo:true,repeat:-1,paused:true}),
+    gsap.to('#boat',{xPercent:-60,duration:4,ease:'sine.inOut',yoyo:true,repeat:-1,paused:true}),
+    gsap.to($$('.iflag span',box),{rotation:function(i){return i%2?3:-3},duration:1.6,ease:'sine.inOut',yoyo:true,repeat:-1,stagger:.2,paused:true})];
+  whenVisible(box,function(){loops.forEach(function(l){l.play()})},function(){loops.forEach(function(l){l.pause()})});
+})();
+
+/* ---------- v2: transplant ---------- */
+(function(){
+  var X=[{a:'de',e:'r',pre:'',n:'Wein',c:'Nominativ, м.р.: <b>der</b> → <b>guter Wein</b>'},
+         {a:'da',e:'s',pre:'ich trinke',n:'Bier',c:'Akkusativ, ср.р.: <b>das</b> → <b>ich trinke gutes Bier</b>'},
+         {a:'de',e:'m',pre:'mit',n:'Käse',c:'Dativ, м.р.: <b>dem</b> → <b>mit gutem Käse</b>'},
+         {a:'di',e:'e',pre:'',n:'Suppe',c:'Nominativ, ж.р.: <b>die</b> → <b>gute Suppe</b>'},
+         {a:'de',e:'r',pre:'mit',n:'Milch',c:'Dativ, ж.р.: <b>der</b> → <b>mit guter Milch</b>'}];
+  var art=$('#tpart'), line=$('#tpline'), fly=$('#tpfly'), cap=$('#tpcap'), st=$('#tpstage'), dots=$('#tpdots'), cur=0, iv=null, manual=false;
+  if(!art) return;
+  X.forEach(function(x,i){ var b=document.createElement('button'); b.textContent=x.a+x.e; b.onclick=function(){ manual=true; clearInterval(iv); iv=null; play(i); }; dots.appendChild(b); });
+  function phrase(x){ return (x.pre?x.pre+' ':'')+'gut'+x.e+' '+x.n; }
+  $('#tpsay').onclick=function(){ say(phrase(X[cur])); };
+  function rel(el){ var a=el.getBoundingClientRect(), b=st.getBoundingClientRect(); return {x:a.left-b.left,y:a.top-b.top}; }
+  function play(i){
+    cur=i; var x=X[i];
+    $$('button',dots).forEach(function(b,k){b.classList.toggle('on',k===i)});
+    $('.tst',art).textContent=x.a; var te=$('.tend',art); te.textContent=x.e;
+    line.innerHTML=(x.pre?'<span>'+x.pre+' </span>':'')+'<span class="tpadj">gut<span class="tpslot">&nbsp;</span></span> <span>'+x.n+'</span>';
+    cap.innerHTML='Артикля нет. Кто покажет падеж?';
+    var slot=$('.tpslot',line);
+    var land=function(){ slot.textContent=x.e; slot.classList.add('on'); cap.innerHTML=x.c; };
+    if(!(G&&window.MotionPathPlugin)){ land(); return; }
+    gsap.set(art,{opacity:1,y:0,scale:1}); gsap.set($('.tst',art),{opacity:1}); gsap.set(te,{opacity:1});
+    var tl=gsap.timeline();
+    tl.from(art,{y:-40,scale:.7,duration:.6,ease:'back.out(2.5)'})
+      .from(line,{y:20,opacity:.2,duration:.4},'<')
+      .add(function(){
+        var a=rel(te); slot.textContent=x.e; slot.style.visibility='hidden'; var b=rel(slot); slot.innerHTML='&nbsp;'; slot.style.visibility='';
+        fly.textContent=x.e; gsap.set(te,{opacity:0});
+        gsap.timeline().set(fly,{opacity:1,x:a.x,y:a.y,rotation:0})
+          .to(fly,{motionPath:{path:[{x:a.x,y:a.y},{x:(a.x+b.x)/2+60,y:(a.y+b.y)/2-10},{x:b.x,y:b.y}],curviness:1.5},rotation:360,duration:1,ease:'power2.inOut'})
+          .add(function(){ gsap.set(fly,{opacity:0}); land(); })
+          .fromTo(slot,{scale:1.9},{scale:1,duration:.7,ease:'elastic.out(1,.4)'})
+          .to($('.tst',art),{opacity:.25,duration:.4},'<');
+      },'+=.5');
+  }
+  play(0);
+  if(G) whenVisible($('#tp'),function(){ if(!manual&&!iv) iv=setInterval(function(){ play((cur+1)%X.length); },3600); },function(){ clearInterval(iv); iv=null; });
+})();
+
+/* ---------- v2: ad explainer ---------- */
+(function(){
+  if(!$('#ad')) return;
+  if(G){
+    gsap.from('#devices .laptop',{y:60,rotation:-3,duration:1,ease:'back.out(1.6)',scrollTrigger:{trigger:'#devices',start:'top 80%'}});
+    gsap.from('#devices .mob',{x:80,rotation:10,duration:1.1,ease:'back.out(1.8)',delay:.2,scrollTrigger:{trigger:'#devices',start:'top 80%'}});
+    gsap.from('#devices .tagf',{scale:.3,opacity:0,duration:.7,ease:'back.out(3)',stagger:.15,delay:.5,scrollTrigger:{trigger:'#devices',start:'top 80%'}});
+    var fl=gsap.to('#devices .tagf',{y:function(i){return i%2?-8:8},duration:2,ease:'sine.inOut',yoyo:true,repeat:-1,stagger:.25,paused:true});
+    whenVisible($('#devices'),function(){fl.play()},function(){fl.pause()});
+    var mob=matchMedia('(min-width:900px)').matches;
+    gsap.fromTo('#hline',mob?{scaleX:0}:{scaleY:0},Object.assign(mob?{scaleX:1}:{scaleY:1},{ease:'none',scrollTrigger:{trigger:'#how',start:'top 75%',end:'bottom 60%',scrub:.5}}));
+    gsap.from('#how .rc',{scale:.3,rotation:-90,duration:.8,ease:'elastic.out(1,.45)',stagger:.25,scrollTrigger:{trigger:'#how',start:'top 75%'}});
+    gsap.from('#how .hw > div:last-child',{x:40,opacity:.1,duration:.7,ease:'power3.out',stagger:.25,scrollTrigger:{trigger:'#how',start:'top 75%'}});
+    var lays=$$('#stack .lay');
+    gsap.from(lays,{x:function(i){return i%2?260:-260},rotation:function(i){return i%2?8:-8},duration:.9,ease:'back.out(1.5)',stagger:.3,scrollTrigger:{trigger:'#stack',start:'top 75%'}});
+    var k=0, hv=null;
+    whenVisible($('#stack'),function(){ if(!hv) hv=setInterval(function(){ lays.forEach(function(l,i){l.classList.toggle('hi',i===k)}); gsap.fromTo(lays[k],{y:0},{y:-10,duration:.3,yoyo:true,repeat:1,ease:'power2.out'}); k=(k+1)%lays.length; },1400); },function(){ clearInterval(hv); hv=null; });
+  }
+  var R=[['Вам нужна A0–A2 · 20 €','Начнёте с алфавита и артиклей, дойдёте до A2. Если планируете идти дальше, обе платформы за 30 € выгоднее.'],
+         ['Вам нужна B1–C1 · 20 €','Грамматика B1–C1 и лексика под экзаменационные темы. Если есть пробелы в базе, берите обе за 30 €.'],
+         ['Вам нужен пакет A0–C1 · 30 €','Обе платформы и раздел экзаменов: Goethe, telc, DTZ, ÖSD, TestDaF. Плюс A0–A2 на украинском в подарок.']];
+  $$('#pbtns button').forEach(function(b){ b.onclick=function(){ $$('#pbtns button').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); var r=R[+b.dataset.l]; $('#presT').textContent=r[0]; $('#presP').textContent=r[1]; var p=$('#pres'); p.classList.add('on'); if(G) gsap.fromTo(p,{y:20,scale:.95},{y:0,scale:1,duration:.6,ease:'back.out(2)'}); }; });
 })();
 
 /* ---------- lazy videos ---------- */
