@@ -477,6 +477,47 @@ html{overflow-x:clip}
 .faq details[open] summary .ic{rotate:180deg}
 .faq details p{margin:0 0 16px;color:#bdbdbd;font-size:15px}
 
+
+/* ===== v3: softer design + CTR ===== */
+.cta{border-radius:14px;min-height:60px;letter-spacing:.04em;transition:scale .2s,translate .2s,box-shadow .2s}
+.cta:hover{translate:0 -2px;box-shadow:0 20px 50px -6px rgba(255,40,20,.85),0 2px 0 rgba(255,255,255,.25) inset}
+.cta .arr{font-size:18px;animation:nudge 1.4s ease-in-out infinite}
+@keyframes nudge{50%{translate:5px 0}}
+.micro{display:flex;gap:6px 14px;justify-content:center;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:#a3a3a3}
+.micro span{display:inline-flex;gap:5px;align-items:center}
+.micro .ic{color:#4fd17c;font-size:14px;stroke-width:2.4}
+.ad{background:radial-gradient(900px 500px at 50% 0,rgba(255,80,30,.10),transparent 70%),radial-gradient(700px 600px at 0 60%,rgba(242,165,124,.06),transparent 70%),#0d0d0d}
+.ad .facts li,.ad .pain,.ad .faq details,.ad .pbtns button,.ad .cn,.ad .pr:not(.best){background:linear-gradient(180deg,#181818,#121212);border:1px solid rgba(255,255,255,.07);border-radius:18px;box-shadow:0 20px 40px -24px rgba(0,0,0,.9)}
+.ad .cn{border-style:solid}
+.ad .h2{font-size:clamp(26px,6.6vw,40px)}
+.ad .sub{color:#a9a9a9}
+.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:22px}
+.trust span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:30px;padding:7px 12px;font-size:12.5px;color:#d6d6d6}
+.trust .st{color:#ffc36b;letter-spacing:1px}
+.trust .ic{color:var(--peach)}
+.midcta{position:relative;max-width:720px;margin:56px auto 0;border-radius:22px;padding:26px 20px 22px;text-align:center;overflow:hidden;
+  background:radial-gradient(420px 220px at 50% 0,rgba(255,70,40,.22),transparent 70%),linear-gradient(180deg,#191919,#121212);border:1px solid rgba(255,110,60,.35);box-shadow:0 30px 60px -30px rgba(255,60,30,.5)}
+.midcta h3{margin:0 0 6px;font-size:21px;font-weight:700;line-height:1.25}
+.midcta p{margin:0 0 16px;color:#bdbdbd;font-size:15px}
+.midcta .cta{width:100%;max-width:380px}
+.bridge{display:flex;gap:14px;align-items:center;max-width:720px;margin:0 auto;padding:16px 18px;border-radius:18px;background:linear-gradient(135deg,#1c1210,#141414);border:1px solid rgba(255,110,60,.28);text-decoration:none;color:#eee;transition:translate .2s,border-color .2s}
+.bridge:hover{translate:0 -2px;border-color:rgba(255,110,60,.6)}
+.bridge img{width:44px;height:44px;border-radius:50%;background:#fff;padding:5px;flex:none}
+.bridge b{display:block;font-size:15.5px}
+.bridge small{color:#a9a9a9;font-size:13px}
+.bridge .ic{margin-left:auto;color:var(--red);font-size:22px;flex:none}
+.bridgewrap{padding:10px 16px 0}
+.revs .rcard{background:linear-gradient(180deg,#181818,#121212);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:12px;margin:0}
+.revs .rcard .st{color:#ffc36b;letter-spacing:2px;font-size:14px;margin:0 0 8px 4px}
+.revs .rcard img{border:0;border-radius:12px}
+.pr ul li::before{content:"✓ ";color:#4fd17c;font-weight:700}
+.pr .per{display:inline-block;margin:-2px 0 12px;background:rgba(79,209,124,.12);color:#7fe3a2;border-radius:20px;padding:4px 10px;font-size:12.5px;font-weight:600}
+.pr.best{scale:1.02}
+.qad{display:inline-flex;margin-top:14px;color:var(--red);font-weight:700;text-decoration:none;gap:6px;align-items:center}
+.dock{border-radius:18px;background:rgba(20,20,20,.97);border-color:rgba(255,110,60,.35)}
+.dock .q{width:44px;height:44px;border-radius:12px;border:1px solid #333;display:flex;align-items:center;justify-content:center;color:#ddd;flex:none;margin-left:auto}
+.dock .cta{margin-left:0}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -817,6 +858,9 @@ html{overflow-x:clip}
   </div>
 </section>
 
+
+<div class="dark bridgewrap"><a class="bridge" href="#ad"><img src="media/logo.webp" alt=""><span><b>Это 1 гайд из 300+ на платформе Stellas</b><small>Так объяснена вся грамматика A0–C1. Посмотреть, что внутри</small></span><svg class="ic"><use href="#i-arrow-right"/></svg></a></div>
+
 <!-- ============ CURVE (algorithm) ============ -->
 <section class="sec dark" id="plan">
   <div class="wrap">
@@ -878,6 +922,7 @@ html{overflow-x:clip}
     <div class="adhead"><span class="pillk"><svg class="ic"><use href="#i-sparkles"/></svg>Реклама. Короткая и честная</span></div>
     <h2 class="h2 sp" style="margin-top:16px">Понравилось? <b>Это один гайд из 300+</b></h2>
     <p class="sub">Его сделала команда Stellas. Ниже за минуту: что это, как работает и сколько стоит.</p>
+    <div class="trust"><span><span class="st">★★★★★</span>отзывы учеников</span><span><svg class="ic"><use href="#i-users"/></svg>100+ студентов клубов</span><span><svg class="ic"><use href="#i-infinity"/></svg>навсегда, без подписки</span></div>
 
     <div class="what">
       <div class="rv">
@@ -901,6 +946,8 @@ html{overflow-x:clip}
       </div>
     </div>
 
+<div class="midcta rv"><h3>Вся грамматика A0–C1 в одном месте</h3><p>Объяснения как на этой странице. Видео, упражнения, ответы с разбором.</p><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Открыть Stellas за 30 €<svg class="ic arr"><use href="#i-arrow-right"/></svg></a><div class="micro"><span><svg class="ic"><use href="#i-check"/></svg>один платёж</span><span><svg class="ic"><use href="#i-check"/></svg>доступ навсегда</span><span><svg class="ic"><use href="#i-check"/></svg>обновления бесплатно</span></div></div>
+
     <h2 class="h2 sp" style="margin-top:90px">Как это работает: <b>3 шага</b></h2>
     <div class="how" id="how">
       <div class="hline" id="hline"></div>
@@ -922,6 +969,8 @@ html{overflow-x:clip}
         <div class="bro"><div class="bar"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" data-src="media/v-notion.mp4" data-poster="media/v-notion.jpg"></video></div>
       </div>
     </div>
+
+<div class="midcta rv"><h3>Хватит собирать немецкий по кусочкам</h3><p>Одна платформа вместо YouTube, трёх сайтов и скриншотов в галерее.</p><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Хочу так учить<svg class="ic arr"><use href="#i-arrow-right"/></svg></a><div class="micro"><span><svg class="ic"><use href="#i-check"/></svg>один платёж</span><span><svg class="ic"><use href="#i-check"/></svg>доступ навсегда</span><span><svg class="ic"><use href="#i-check"/></svg>обновления бесплатно</span></div></div>
 
     <h2 class="h2 sp" style="margin-top:90px">Зачем это вам. <b>Немецкий портит жизнь в мелочах</b></h2>
     <p class="sub">Не в учебнике. В обычный вторник.</p>
@@ -959,11 +1008,13 @@ html{overflow-x:clip}
 
     <h2 class="h2 sp" style="margin-top:80px">Что пишут <b>те, кто уже внутри</b></h2>
     <div class="revs">
-      <img loading="lazy" src="media/rev-r3.webp" alt="Отзыв ученицы">
-      <img loading="lazy" src="media/rev-r1.webp" alt="Отзыв ученика">
-      <img loading="lazy" src="media/rev-r5.webp" alt="Отзыв ученика">
-      <img loading="lazy" src="media/rev-r2.webp" alt="Отзыв ученицы">
+      <figure class="rcard"><div class="st">★★★★★</div><img loading="lazy" src="media/rev-r3.webp" alt="Отзыв ученицы"></figure>
+      <figure class="rcard"><div class="st">★★★★★</div><img loading="lazy" src="media/rev-r1.webp" alt="Отзыв ученика"></figure>
+      <figure class="rcard"><div class="st">★★★★★</div><img loading="lazy" src="media/rev-r5.webp" alt="Отзыв ученика"></figure>
+      <figure class="rcard"><div class="st">★★★★★</div><img loading="lazy" src="media/rev-r2.webp" alt="Отзыв ученицы"></figure>
     </div>
+
+<div class="midcta rv"><h3>Они уже внутри. Вы следующий?</h3><p>30 € один раз. Дальше только немецкий.</p><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Открыть Stellas за 30 €<svg class="ic arr"><use href="#i-arrow-right"/></svg></a><div class="micro"><span><svg class="ic"><use href="#i-check"/></svg>один платёж</span><span><svg class="ic"><use href="#i-check"/></svg>доступ навсегда</span><span><svg class="ic"><use href="#i-check"/></svg>обновления бесплатно</span></div></div>
 
     <h2 class="h2 sp" style="margin-top:90px">Какой уровень <b>вам подходит?</b></h2>
     <p class="sub">Нажмите на то, что про вас.</p>
@@ -973,7 +1024,7 @@ html{overflow-x:clip}
         <button data-l="1"><svg class="ic"><use href="#i-message-circle"/></svg><span>База есть, хочу говорить<small>A2–B1, путаюсь в окончаниях</small></span></button>
         <button data-l="2"><svg class="ic"><use href="#i-graduation-cap"/></svg><span>Готовлюсь к экзамену<small>B1, B2, C1, работа, учёба</small></span></button>
       </div>
-      <div class="pres" id="pres"><h4 id="presT"></h4><p id="presP"></p><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener" id="presB">Получить доступ</a></div>
+      <div class="pres" id="pres"><h4 id="presT"></h4><p id="presP"></p><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener" id="presB">Открыть Stellas<svg class="ic arr"><use href="#i-arrow-right"/></svg></a></div>
     </div>
 
     <div class="adgrid" style="margin-top:80px">
@@ -991,7 +1042,8 @@ html{overflow-x:clip}
         <div class="form">
           <p><b>Одна кнопка</b>. Без звонков ассистента.<br>Ассистента нет. Отвечаю я.</p>
           <div class="fakein"><svg class="ic"><use href="#i-wine"/></svg>A0–C1 · <b>30 €</b> · навсегда</div>
-          <a class="cta wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить доступ</a>
+          <a class="cta wide" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Открыть Stellas за 30 €<svg class="ic arr"><use href="#i-arrow-right"/></svg></a>
+          <div class="micro"><span><svg class="ic"><use href="#i-check"/></svg>один платёж</span><span><svg class="ic"><use href="#i-check"/></svg>доступ навсегда</span><span><svg class="ic"><use href="#i-check"/></svg>обновления бесплатно</span></div>
           <small>Нажимая на кнопку, вы соглашаетесь больше не говорить «ein gute Wein»</small>
         </div>
       </div>
@@ -1001,7 +1053,7 @@ html{overflow-x:clip}
     <p class="sub">Без подписки. Все обновления для купивших бесплатно.</p>
     <div class="prices">
       <div class="pr rv"><h4>A0 – A2</h4><div class="p">20 €</div><ul><li>для тех, кто с нуля</li><li>грамматика, лексика, фразы</li><li>доступ навсегда</li></ul><a class="ghost" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Выбрать</a></div>
-      <div class="pr best rv"><span class="tag">ВЫГОДНЕЕ ВСЕГО</span><h4>A0 – C1 · обе платформы</h4><div class="p"><s>40 €</s>30 €</div><ul><li>всё от нуля до C1</li><li>раздел экзаменов</li><li>+ A0–A2 на украинском в подарок</li></ul><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить доступ</a></div>
+      <div class="pr best rv"><span class="tag">ВЫГОДНЕЕ ВСЕГО</span><h4>A0 – C1 · обе платформы</h4><div class="p"><s>40 €</s>30 €</div><span class="per">≈ 10 центов за гайд</span><ul><li>всё от нуля до C1</li><li>раздел экзаменов</li><li>+ A0–A2 на украинском в подарок</li></ul><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Открыть Stellas<svg class="ic arr"><use href="#i-arrow-right"/></svg></a><div class="micro"><span><svg class="ic"><use href="#i-check"/></svg>один платёж</span><span><svg class="ic"><use href="#i-check"/></svg>доступ навсегда</span><span><svg class="ic"><use href="#i-check"/></svg>обновления бесплатно</span></div></div>
       <div class="pr rv"><h4>B1 – C1</h4><div class="p">20 €</div><ul><li>для тех, кто уже в теме</li><li>интерактивные гайды под экзамены</li><li>доступ навсегда</li></ul><a class="ghost" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Выбрать</a></div>
     </div>
     <p class="sub" style="margin-top:22px">Цену я планирую поднять после следующих обновлений. Кто купил раньше, платит один раз.</p>
@@ -1022,7 +1074,7 @@ html{overflow-x:clip}
     </div>
   </div>
 </section>
-<div class="dock" id="dock"><span><b>Stellas A0–C1 · 30 €</b>платформа немецкого, навсегда</span><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить</a></div>
+<div class="dock" id="dock"><span><b>Stellas A0–C1 · 30 €</b>вся грамматика, навсегда</span><a class="q" href="https://t.me/stellasdeutsch" target="_blank" rel="noopener" aria-label="Задать вопрос в Telegram"><svg class="ic"><use href="#i-send"/></svg></a><a class="cta" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Получить</a></div>
 
 
 
@@ -1346,7 +1398,7 @@ if(G){
   }
   function done(){
     var t= score===6?'Официант кивнул. Можно заказывать.': score>=4?'Почти. Вино нальют, но посмотрят.':'Официант ещё протирает стакан. Пройдите правило ещё раз.';
-    qz.innerHTML='<div class="qfin"><div class="big">'+score+' / '+Q.length+'</div><p>'+t+'</p><button class="cta" id="qr">Ещё раз</button></div>';
+    qz.innerHTML='<div class="qfin"><div class="big">'+score+' / '+Q.length+'</div><p>'+t+'</p><button class="cta" id="qr">Ещё раз</button>'+($('#ad')?'<br><a class="qad" href="#ad">Так объяснена вся грамматика. Посмотреть Stellas →</a>':'')+'</div>';
     $('#qr').onclick=function(){ i=0; score=0; draw(); };
     if(score>=4) confetti();
   }
@@ -1359,7 +1411,7 @@ if(G){
 /* ---------- AD extras ---------- */
 (function(){
   var dock=$('#dock'), ad=$('#ad');
-  if(dock&&ad){ var io=new IntersectionObserver(function(e){ dock.classList.toggle('on',e[0].isIntersecting); },{rootMargin:'0px 0px -40% 0px'}); io.observe(ad); }
+  if(dock&&ad){ var tb=$('#table'), pz=$('.prices'); var upd=function(){ var past=tb.getBoundingClientRect().top<0, pr=pz.getBoundingClientRect(), inP=pr.top<innerHeight&&pr.bottom>0; dock.classList.toggle('on',past&&!inP); }; addEventListener('scroll',upd,{passive:true}); upd(); }
   $$('.count').forEach(function(c){ var to=+c.dataset.to; if(!G) return; var o={v:0}; c.textContent='0';
     gsap.to(o,{v:to,duration:2,ease:'power2.out',scrollTrigger:{trigger:c,start:'top 90%'},onUpdate:function(){c.textContent=Math.round(o.v)}}); });
   var s3=$('#spath');
@@ -1456,6 +1508,8 @@ if(G){
   $$('#pbtns button').forEach(function(b){ b.onclick=function(){ $$('#pbtns button').forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); var r=R[+b.dataset.l]; $('#presT').textContent=r[0]; $('#presP').textContent=r[1]; var p=$('#pres'); p.classList.add('on'); if(G) gsap.fromTo(p,{y:20,scale:.95},{y:0,scale:1,duration:.6,ease:'back.out(2)'}); }; });
 })();
 
+/* ---------- v3: mid CTA pop ---------- */
+if(G){ $$('.midcta').forEach(function(m){ gsap.from($('.cta',m),{scale:.85,duration:.8,ease:'elastic.out(1,.5)',scrollTrigger:{trigger:m,start:'top 80%'}}); }); }
 /* ---------- lazy videos ---------- */
 (function(){
   var vs=$$('video[data-src]'); if(!vs.length) return;
